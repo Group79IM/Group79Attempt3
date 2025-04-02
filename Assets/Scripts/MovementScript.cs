@@ -42,7 +42,4 @@ public class MovementScript : MonoBehaviour
     void OnMove(InputValue value) {
         currentMovement = value.Get<Vector2>();
     }
-
-
-
 }
