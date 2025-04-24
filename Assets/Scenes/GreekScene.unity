@@ -106,13 +106,8 @@ NavMeshSettings:
     serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
-<<<<<<< HEAD
-    agentHeight: 2
-    agentSlope: 45
-=======
     agentHeight: 6
     agentSlope: 34.3
->>>>>>> Tech
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -126,11 +121,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-<<<<<<< HEAD
-  m_NavMeshData: {fileID: 0}
-=======
   m_NavMeshData: {fileID: 23800000, guid: cb63e7e2243164f16a04474ddf591d11, type: 2}
->>>>>>> Tech
 --- !u!1 &120700694
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,11 +231,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-<<<<<<< HEAD
-  m_StaticEditorFlags: 0
-=======
   m_StaticEditorFlags: 2147483647
->>>>>>> Tech
   m_IsActive: 1
 --- !u!64 &206513674
 MeshCollider:
@@ -345,13 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_roof_1_square
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1826223820960636, guid: cae15631505aa4b9e90ba7faf74a5ee5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4237134303555176, guid: cae15631505aa4b9e90ba7faf74a5ee5, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.91664
@@ -426,13 +410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (5)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.199997
@@ -499,11 +480,7 @@ GameObject:
   - component: {fileID: 507861263}
   - component: {fileID: 507861265}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Player (for scale)
-=======
   m_Name: Player
->>>>>>> Tech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,11 +745,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-<<<<<<< HEAD
-  m_StaticEditorFlags: 0
-=======
   m_StaticEditorFlags: 2147483647
->>>>>>> Tech
   m_IsActive: 1
 --- !u!4 &556950636
 Transform:
@@ -806,13 +779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (2)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.199997
@@ -875,13 +845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (4)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.399994
@@ -944,13 +911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (7)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.30000305
@@ -1018,11 +982,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-<<<<<<< HEAD
-  m_StaticEditorFlags: 0
-=======
   m_StaticEditorFlags: 2147483647
->>>>>>> Tech
   m_IsActive: 1
 --- !u!65 &1020141299
 BoxCollider:
@@ -1122,13 +1082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (8)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1191,13 +1148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_column_1 (2)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1983556692974774, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4762557703857840, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.2368693
@@ -1272,13 +1226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18
@@ -1337,8 +1288,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
-=======
     - target: {fileID: 1004267348514888, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -1411,13 +1360,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 1164288450502436, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
       propertyPath: m_Name
       value: Temple
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1164288450502436, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -1754,7 +1700,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4064555647032484, guid: 9293442b452d64a09b2bbd4bd563a965, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.69948
@@ -1864,13 +1809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_column_1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1983556692974774, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4762557703857840, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.2368693
@@ -1947,11 +1889,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-<<<<<<< HEAD
-  m_StaticEditorFlags: 0
-=======
   m_StaticEditorFlags: 2147483647
->>>>>>> Tech
   m_IsActive: 1
 --- !u!4 &1500785117
 Transform:
@@ -1984,13 +1922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (6)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.699997
@@ -2053,13 +1988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (3)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.099991
@@ -2122,13 +2054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_column_1 (3)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1983556692974774, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4762557703857840, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.2368693
@@ -2205,11 +2134,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-<<<<<<< HEAD
-  m_StaticEditorFlags: 0
-=======
   m_StaticEditorFlags: 2147483647
->>>>>>> Tech
   m_IsActive: 1
 --- !u!4 &1712939475
 Transform:
@@ -2247,13 +2172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_column_1 (1)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1983556692974774, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4762557703857840, guid: b67c34942f06641839dbb616d6b0423f, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.2368693
@@ -2328,13 +2250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_tree_2 (1)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1064631259620874, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> Tech
     - target: {fileID: 4653033324559612, guid: 6a795ebc8fb3847c49aadadb856a09de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.599991
@@ -2397,11 +2316,8 @@ GameObject:
   - component: {fileID: 2116881857}
   - component: {fileID: 2116881856}
   - component: {fileID: 2116881855}
-<<<<<<< HEAD
-=======
   - component: {fileID: 2116881859}
   - component: {fileID: 2116881860}
->>>>>>> Tech
   m_Layer: 0
   m_Name: 'Boss (for scale) '
   m_TagString: Damages
@@ -2428,17 +2344,10 @@ CapsuleCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
-=======
   m_Radius: 1.0964745
   m_Height: 2.9999998
   m_Direction: 1
   m_Center: {x: 0.59647447, y: 0, z: 0}
->>>>>>> Tech
 --- !u!23 &2116881856
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2504,8 +2413,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!114 &2116881859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2540,7 +2447,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
->>>>>>> Tech
 --- !u!1 &2122157247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,11 +2464,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-<<<<<<< HEAD
-  m_StaticEditorFlags: 0
-=======
   m_StaticEditorFlags: 2147483647
->>>>>>> Tech
   m_IsActive: 1
 --- !u!65 &2122157248
 BoxCollider:
@@ -2667,11 +2569,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-<<<<<<< HEAD
-  m_StaticEditorFlags: 0
-=======
   m_StaticEditorFlags: 2147483647
->>>>>>> Tech
   m_IsActive: 1
 --- !u!65 &2143848118
 BoxCollider:
