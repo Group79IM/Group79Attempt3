@@ -529,6 +529,8 @@ GameObject:
   - component: {fileID: 1994029827}
   - component: {fileID: 1994029831}
   - component: {fileID: 1994029830}
+  - component: {fileID: 1994029833}
+  - component: {fileID: 1994029832}
   - component: {fileID: 1994029829}
   m_Layer: 0
   m_Name: Capsule
@@ -625,6 +627,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994029826}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1994029832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994029826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7685a12a3b34b5cbc23899792cc18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBody: {fileID: 1076871785}
+  mouseSensitivity: 100
+  minViewDistance: 25
+--- !u!114 &1994029833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994029826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11aeaa60226e14d25a9fd998b2ce884d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 0}
+  controller: {fileID: 0}
+  speed: 10
+  rigidBody: {fileID: 1076871787}
 --- !u!1 &2096088181
 GameObject:
   m_ObjectHideFlags: 0
