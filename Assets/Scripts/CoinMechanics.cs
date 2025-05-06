@@ -6,12 +6,12 @@ public class CoinMechanics : MonoBehaviour
 {
     [SerializeField] SphereCollider sphereCollider;
     
-    void Start() {
-        sphereCollider = GetComponent<SphereCollider>();
-    }
-    private void MoneyMechanics {
-        if (sphereCollider) {
-            money.AddMoney(1);
-        }
-    }
+    // void Start() {
+    //     sphereCollider = GetComponent<SphereCollider>();
+    // }
+    // private void MoneyMechanics {
+    //     if (sphereCollider) {
+    //         money.AddMoney(1);
+    //     }
+    // }
 }
