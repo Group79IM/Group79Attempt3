@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+
+
     public GameObject projectilePrefab; // bullet or projectile prefab
     public Transform firePoint;         // where bullets are fired from
     public float shootCooldown = 1.5f;  // time between shots
@@ -20,11 +22,12 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        Debug.Log("HELLOO");
     }
 
     void Update()
     {
-        shootTimer += Time.deltaTime;
+        // shootTimer += Time.deltaTime;
 
         if (player != null)
         {
@@ -40,45 +43,45 @@ public class EnemyAI : MonoBehaviour
                 distanceAway = 1f;
             }
 
-            if (shootTimer >= shootCooldown && found == true)
-            {
-                ShootAtPlayer();
-                shootTimer = 0f;
-            }
+//            if (shootTimer >= shootCooldown && found)
+// {
+                
+//                  distance = Vector3.Distance(transform.position, player.transform.position);
+//                 if (distance <= shootRange)
+//                     {
+//                         ShootAtPlayer();
+//                         shootTimer = 0f;
+//                      }
+//             }
+//         }
         }
-    }
 
-    void ShootAtPlayer()
-    {
-        if (projectilePrefab != null && firePoint != null)
-        {
-            GameObject bullet = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-            Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            if (rb != null && player != null)
-            {
-                Vector3 direction = (player.transform.position - firePoint.position).normalized;
-                rb.velocity = direction * shootSpeed; // bullet speed
-            }
-        }
-    }
+    // void ShootAtPlayer()
+    // {
+    //     if (projectilePrefab != null && firePoint != null)
+    //     {
+    //         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+    //         Rigidbody rb = bullet.GetComponent<Rigidbody>();
+    //         if (rb != null && player != null)
+    //         {
+    //             Vector3 direction = (player.transform.position - firePoint.position).normalized;
+    //             rb.velocity = direction * shootSpeed; 
+    //         }
+    //     }
+    // }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Player")
+         Debug.Log("hello");
+        if (other.gameObject.name ==  "Sword")
         {
+            Debug.Log("hello");
             player = other.gameObject;
             found = true;
             distanceAway = 1f;
         }
-
-        if (other.CompareTag("End"))
-        {
-            inMotion = false;
-            distanceAway = 0f;
-        }
-        else if (other.CompareTag("Interactables") || other.CompareTag("Door"))
-        {
-            distanceAway = 5f;
-        }
     }
+}
+
+
 }

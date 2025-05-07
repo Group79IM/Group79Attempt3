@@ -18,7 +18,7 @@ public class Interactions : MonoBehaviour
     
     // health bar components
     public Image healthBar;
-    public float healthAmount = 100f;
+    public float healthAmount = 250f;
   
 
     // identifier for current interaction number
@@ -31,7 +31,7 @@ public class Interactions : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(healthAmount);
+        // Debug.Log(healthAmount);
 
     }   
 
@@ -40,7 +40,7 @@ public class Interactions : MonoBehaviour
     void OnTriggerStay(Collider other)
     {   
         // checks if the player is in a damaging collider (e.g fire or loose electricity)
-        if (other.CompareTag("Damages") && !other.CompareTag("Interactables") && !other.CompareTag("Door")) 
+        if (other.CompareTag("Damages")) 
         {
             TakeDamage(1f); // damages player by the rate of 0.4 health
         }
