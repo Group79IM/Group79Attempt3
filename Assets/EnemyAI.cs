@@ -22,7 +22,6 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        Debug.Log("HELLOO");
     }
 
     void Update()
@@ -72,10 +71,10 @@ public class EnemyAI : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-         Debug.Log("hello");
-        if (other.gameObject.name ==  "Sword")
+        Debug.Log("unknown collider detected");
+        if (other.tag == "Player")
         {
-            Debug.Log("hello");
+            Debug.Log("player detected");
             player = other.gameObject;
             found = true;
             distanceAway = 1f;
