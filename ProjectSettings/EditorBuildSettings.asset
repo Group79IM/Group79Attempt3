@@ -9,15 +9,18 @@ EditorBuildSettings:
     path: Assets/Group79Moving/Scenes 2/MainMenu.unity
     guid: 6a2cede65081bbd45ba78949beac9d4b
   - enabled: 1
-    path: Assets/Group79Moving/Scenes 2/MonkeyScene.unity
-    guid: e70b196c163c73545ab0b707434f67de
+    path: Assets/Scenes/SettingsScene.unity
+    guid: 1b81f2290f42420408a3ba4853ce43de
   - enabled: 1
-    path: Assets/Group79Moving/Scenes 2/RoomScene.unity
-    guid: 1ffc6c9ec3014aa4b832756ec55c4622
+    path: Assets/Group79Moving/Scenes 2/WonScene.unity
+    guid: b57675f3d5a27c64e903648636c7628d
+  - enabled: 1
+    path: Assets/Group79Moving/Scenes 2/DeathScene.unity
+    guid: ee43fd070dd7f9542b79d791bc300865
   - enabled: 1
     path: Assets/Group79Moving/Scenes 2/GreekScene.unity
     guid: ea24be72388f46048892f2c988f68e5c
   - enabled: 1
-    path: Assets/Group79Moving/Scenes 2/TestScene.unity
-    guid: 69b722899556be54aa4cb0dc6756e9ce
+    path: Assets/Group79Moving/Scenes 2/MonkeyScene.unity
+    guid: e70b196c163c73545ab0b707434f67de
   m_configObjects: {}
