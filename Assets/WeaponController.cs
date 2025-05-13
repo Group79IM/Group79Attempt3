@@ -38,7 +38,7 @@ public class WeaponController : MonoBehaviour
             swordAnimator.SetTrigger("attack");
         }
 
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
         canAttack = true;
     }
