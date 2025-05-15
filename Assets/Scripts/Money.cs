@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Money : MonoBehaviour
 {
-    [SerializeField] private int bankAccount = 0;
+    public static int bankAccount = 0;
     
     public void AddMoney(int amount) {
         bankAccount = bankAccount + amount;
+        Debug.Log("Money: " + bankAccount);
     }
 
     public void DecreaseMoney(int amount) {
