@@ -1986,6 +1986,7 @@ GameObject:
   - component: {fileID: 299186313}
   - component: {fileID: 299186321}
   - component: {fileID: 299186320}
+  - component: {fileID: 299186322}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2255,6 +2256,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!81 &299186322
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299186312}
+  m_Enabled: 1
 --- !u!1 &306152841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1599826595754709761, guid: d6487986613dc554e860f706be71a4e9, type: 3}

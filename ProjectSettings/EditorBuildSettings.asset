@@ -18,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Group79Moving/Scenes 2/DeathScene.unity
     guid: ee43fd070dd7f9542b79d791bc300865
   - enabled: 1
-    path: Assets/Group79Moving/Scenes 2/GreekScene.unity
-    guid: ea24be72388f46048892f2c988f68e5c
-  - enabled: 1
     path: Assets/Group79Moving/Scenes 2/MonkeyScene.unity
     guid: e70b196c163c73545ab0b707434f67de
+  - enabled: 1
+    path: Assets/Group79Moving/Scenes 2/RoomScene.unity
+    guid: 1ffc6c9ec3014aa4b832756ec55c4622
   m_configObjects: {}
