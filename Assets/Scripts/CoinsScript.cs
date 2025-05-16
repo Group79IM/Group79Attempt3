@@ -11,11 +11,22 @@ public class CoinsScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    // void Update()
+    // {
+    //     if (gameObject.CompareTag("Money"))
+    //     {
+    //         Destroy(gameObject);
+    //         Money bankAccount = FindObjectOfType<Money>();
+    //         bankAccount.AddMoney(1);
+    //     }
+    // }
+
+    void OnCollisionEnter(Collision collision)
     {
-        if (gameObject.CompareTag("Money"))
+        if (collision.gameObject.CompareTag("Money"))
         {
-            Destroy(gameObject);
+            Debug.Log("Player collided with coin");
+            Destroy(collision.gameObject);
             Money bankAccount = FindObjectOfType<Money>();
             bankAccount.AddMoney(1);
         }

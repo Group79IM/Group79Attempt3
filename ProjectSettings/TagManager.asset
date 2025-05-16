@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Damages
   - Enemy
+  - Money
   layers:
   - Default
   - TransparentFX
