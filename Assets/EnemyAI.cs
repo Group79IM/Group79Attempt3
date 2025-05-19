@@ -5,6 +5,8 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
 
+    public float healthAmount = 100f;
+    public Animator animator;
 
     public GameObject projectilePrefab; // bullet or projectile prefab
     public Transform firePoint;         // where bullets are fired from
@@ -28,19 +30,19 @@ public class EnemyAI : MonoBehaviour
     {
         // shootTimer += Time.deltaTime;
 
-        if (player != null)
-        {
-            float distance = Vector3.Distance(transform.position, player.transform.position);
+        // if (player != null)
+        // {
+        //     float distance = Vector3.Distance(transform.position, player.transform.position);
 
-            if (found && inMotion)
-            {
-                agent.destination = player.transform.position + player.transform.forward * distanceAway;
-            }
+        //     if (found && inMotion)
+        //     {
+        //         agent.destination = player.transform.position + player.transform.forward * distanceAway;
+        //     }
 
-            if (distance > 5f)
-            {
-                distanceAway = 1f;
-            }
+        //     if (distance > 5f)
+        //     {
+        //         distanceAway = 1f;
+        //     }
 
 //            if (shootTimer >= shootCooldown && found)
 // {
@@ -80,7 +82,16 @@ public class EnemyAI : MonoBehaviour
             distanceAway = 1f;
         }
     }
-}
 
 
+    void TakeDamage(float damage){
+        healthAmount -= damage;
+
+        if(healthAmount <= 0){
+            animator.SetTrigger("die");
+            Destroy(gameObject);
+
+        }
+    }
 }
+
