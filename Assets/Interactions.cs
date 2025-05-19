@@ -31,7 +31,6 @@ public class Interactions : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(healthAmount);
 
     }   
 

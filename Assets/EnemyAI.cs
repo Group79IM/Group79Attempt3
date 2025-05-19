@@ -75,10 +75,8 @@ public class EnemyAI : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("unknown collider detected");
         if (other.tag == "Player")
         {
-            Debug.Log("player detected");
             player = other.gameObject;
             found = true;
             distanceAway = 1f;
@@ -90,9 +88,10 @@ public class EnemyAI : MonoBehaviour
         healthAmount -= damage;
 
         if(healthAmount <= 0){
-            animator.SetTrigger("die");
-
-
+             Debug.Log("hello");
+            animator.Play("death");
+            
+           
         }
     }
 }
