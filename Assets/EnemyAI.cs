@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
 
     public float healthAmount = 100f;
-    public Animator animator;
+    public Animator animator; 
 
     public GameObject projectilePrefab; // bullet or projectile prefab
     public Transform firePoint;         // where bullets are fired from
@@ -24,6 +24,8 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -84,12 +86,12 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-    void TakeDamage(float damage){
+   public void TakeDamage(float damage){
         healthAmount -= damage;
 
         if(healthAmount <= 0){
             animator.SetTrigger("die");
-            Destroy(gameObject);
+
 
         }
     }

@@ -2903,7 +2903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 100
-  animator: {fileID: 0}
+  animator: {fileID: 1231316875}
   projectilePrefab: {fileID: 0}
   firePoint: {fileID: 1773072786}
   shootCooldown: 1.5
@@ -2930,6 +2930,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 31.390476, y: 37.07077, z: 22.352388}
   m_Center: {x: -2.4956489, y: 18.592453, z: 1.3825072}
+--- !u!1 &1277272477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7709364175028668874, guid: 1133b092a68112a4db20fd54f9371f76, type: 3}
+  m_PrefabInstance: {fileID: 1863763472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1277272480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277272477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc8737a1ffb444b5a06eafe87381ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthAmount: 100
+  animator: {fileID: 0}
+  projectilePrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  shootCooldown: 1.5
+  shootRange: 10
+  shootSpeed: 0
+--- !u!65 &1277272481
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277272477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1278057627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4486,6 +4531,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7709364175028668874, guid: 1133b092a68112a4db20fd54f9371f76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1277272481}
+    - targetCorrespondingSourceObject: {fileID: 7709364175028668874, guid: 1133b092a68112a4db20fd54f9371f76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1277272480}
     - targetCorrespondingSourceObject: {fileID: 5151609983422912828, guid: 1133b092a68112a4db20fd54f9371f76, type: 3}
       insertIndex: -1
       addedObject: {fileID: 87336209}
