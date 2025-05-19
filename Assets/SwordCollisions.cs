@@ -13,8 +13,14 @@ public class SwordCollisions : MonoBehaviour
         if(other.tag == "Damages" && wc.isAttacking )
         {
             notHit = false;
-        //    Debug.Log("yipee");
             other.GetComponent<Animator>().SetTrigger("hit");
+
+             EnemyAI enemy = other.GetComponent<EnemyAI>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(20f);
+            }
+
             notHit = true;
         }
     }
