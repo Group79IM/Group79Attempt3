@@ -4,55 +4,80 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
-public class SceneChanger : MonoBehaviour {
+public class SceneChanger : MonoBehaviour
+{
     [SerializeField] private Group79Game input;
     [SerializeField] private GameObject gameObject;
-    private void Awake() {
+    [SerializeField] private bool menuOpen = false;
+    private void Awake()
+    {
         input = new Group79Game();
-        input.GameUI.Exit.performed += Pause;
+        input.GameUI.Exit.performed += PauseMenuManagement;
     }
-    void OnEnable() {
+    void OnEnable()
+    {
         input.GameUI.Enable();
     }
-    void OnDisable() {
+    void OnDisable()
+    {
         input.GameUI.Disable();
     }
-    public void MainMenu() {
+    public void MainMenu()
+    {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
-    public void QuitApp() {
+    public void QuitApp()
+    {
         Application.Quit();
         Debug.Log("Application Has Quit");
-    } 
-    public void SettingsScene() {
+    }
+    public void SettingsScene()
+    {
         SceneManager.LoadScene(1);
     }
-    public void Pause(InputAction.CallbackContext context) {
+    public void Pause()
+    {
         Time.timeScale = 0f;
         Enable();
     }
-    public void UnPause() {
+    public void UnPause()
+    {
         Time.timeScale = 1f;
         Disable();
     }
-    public void WinningScene() {
+    public void WinningScene()
+    {
         SceneManager.LoadScene(2);
     }
-    public void DeathScene() {
+    public void DeathScene()
+    {
         SceneManager.LoadScene(3);
     }
-    public void Disable() {
+    public void Disable()
+    {
         gameObject.SetActive(false);
     }
-    public void Enable() {
+    public void Enable()
+    {
         gameObject.SetActive(true);
     }
-    public void EgyptScene() {
+    public void EgyptScene()
+    {
         SceneManager.LoadScene(4);
     }
-    public void FuturisticScene() {
+    public void FuturisticScene()
+    {
         SceneManager.LoadScene(5);
+    }
+    public void PauseMenuManagement(InputAction.CallbackContext context) {
+        if (menuOpen == false) {
+            menuOpen = true;
+            Pause();
+        } else {
+            menuOpen = false;
+            UnPause();
+        }
     }
 
 }
