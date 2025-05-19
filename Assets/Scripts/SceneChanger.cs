@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class SceneChanger : MonoBehaviour {
-    // [SerializeField] private PlayerInput input;
-    // [SerializeField] private GameObject gameObject;
-    // private void Awake() {
-    //     // input = new PlayerInput();
-    //     input.GameUI.Exit.performed += Pause;
-    // }
-    // void OnEnable() {
-    //     input.GameUI.Enable();
-    // }
-    // void OnDisable() {
-    //     input.GameUI.Disable();
-    // }
+    [SerializeField] private Group79Game input;
+    [SerializeField] private GameObject gameObject;
+    private void Awake() {
+        input = new Group79Game();
+        input.GameUI.Exit.performed += Pause;
+    }
+    void OnEnable() {
+        input.GameUI.Enable();
+    }
+    void OnDisable() {
+        input.GameUI.Disable();
+    }
     public void MainMenu() {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
