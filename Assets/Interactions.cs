@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class Interactions : MonoBehaviour
 {
-
-
+    public float healthAmount = 100f;
+    public Image healthBar;
 
 
 
