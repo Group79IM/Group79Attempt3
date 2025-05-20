@@ -9,20 +9,10 @@ using UnityEngine.SceneManagement;
 
 public class Interactions : MonoBehaviour
 {
-    // interaction case 
-    public string interaction = "0";
 
-    // flags
-    private bool isPlayerNear = false; // flag for if the player is in a collider
-    private bool hasCharge = false; // flag for if the player has the electrical charge equipped
-    
-    // health bar components
-    public Image healthBar;
-    public float healthAmount = 100f;
-  
 
-    // identifier for current interaction number
-    public int interactionNumber = 0;
+
+
 
      void Start()
     {  
@@ -38,10 +28,10 @@ public class Interactions : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {   
-        // checks if the player is in a damaging collider (e.g fire or loose electricity)
+        // checks if the player is in a damaging collider (
         if (other.CompareTag("Damages")) 
         {
-            TakeDamage(0.1f); // damages player by the rate of 0.4 health
+            TakeDamage(0.1f); // damages player at a rate
         }
     }
 
