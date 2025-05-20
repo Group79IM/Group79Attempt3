@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Money : MonoBehaviour
 {
-    public static int bankAccount = 0;
+    public int bankAccount = 0;
     
     public void AddMoney(int amount) {
         bankAccount = bankAccount + amount;
