@@ -7,6 +7,7 @@ public class WeaponController : MonoBehaviour
     public GameObject laser;
     public GameObject gun;
     public float attackCooldown = 1f;
+    public Animator animator;
 
     private bool canAttack = true;
     [HideInInspector]
@@ -16,66 +17,71 @@ public class WeaponController : MonoBehaviour
 
     public bool swordEquipped = false;
 
+    public float animationLength;
+
     void Start()
     {
         // if (sword != null)
             swordAnimator = sword.GetComponent<Animator>();
+            animator = GetComponent<Animator>();
         // }
     }
 
     void Update()
     {
         //sword hit
-        if (Input.GetMouseButtonDown(0) && canAttack && swordEquipped == true)
+        if (Input.GetMouseButtonDown(0) && canAttack )
         {
             StartCoroutine(Attack());
         }
 
         //gun shooting
-        if (Input.GetMouseButtonDown(0) && swordEquipped == false)
-        {
-            shoot();
-        }
-        if (Input.GetMouseButtonUp(0) && swordEquipped == false)
-        {
-            stopShooting();
-        }
+        // if (Input.GetMouseButtonDown(0) && swordEquipped == false)
+        // {
+        //     shoot();
+        // }
+        // if (Input.GetMouseButtonUp(0) && swordEquipped == false)
+        // {
+        //     stopShooting();
+        // }
 
-        //weapon switch
-        if (Input.GetKeyDown(KeyCode.Alpha1) && swordEquipped == false)
-        {
-            gun.SetActive(false);
-            laser.SetActive(false);
-            sword.SetActive(true);
-            swordEquipped = true;
-        }
-         if (Input.GetKeyDown(KeyCode.Alpha2) && swordEquipped == true)
-        {
-            sword.SetActive(false);
-            gun.SetActive(true);
-            laser.SetActive(false);
-            swordEquipped = false;
-        }
+        // //weapon switch
+        // if (Input.GetKeyDown(KeyCode.Alpha1) && swordEquipped == false)
+        // {
+        //     gun.SetActive(false);
+        //     laser.SetActive(false);
+        //     sword.SetActive(true);
+        //     swordEquipped = true;
+        // }
+        //  if (Input.GetKeyDown(KeyCode.Alpha2) && swordEquipped == true)
+        // {
+        //     sword.SetActive(false);
+        //     gun.SetActive(true);
+        //     laser.SetActive(false);
+        //     swordEquipped = false;
+        // }
     }
 
-    void shoot(){
-        laser.SetActive(true);
-    }
-    void stopShooting(){
-        laser.SetActive(false);
-    }
+    // void shoot(){
+    //     laser.SetActive(true);
+    // }
+    // void stopShooting(){
+    //     laser.SetActive(false);
+    // }
 
     IEnumerator Attack()
     {
         canAttack = false;
         isAttacking = true;
 
-        if (swordAnimator != null  && sword != null)
+        if (animator != null)
         {
-            swordAnimator.SetTrigger("attack");
+            animator.SetTrigger("attack");
+
+            animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
+            yield return new WaitForSeconds(animationLength);
         }
 
-        yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
         canAttack = true;
     }

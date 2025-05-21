@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     private float patrolWaitTime = 3f;
     private float patrolTimer = 0f;
     private float lastAttackTime = -999f;
+    public float attackRangeTolerance = 0.5f;
 
     private bool isDead = false;
     private bool playerDetected = false;
@@ -166,7 +167,7 @@ public class EnemyAI : MonoBehaviour
 
         // Check if player is still in attack range (optional but recommended)
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if (distanceToPlayer <= attackRange + 0.5f) // a small tolerance
+        if (distanceToPlayer <= attackRange + attackRangeTolerance) // a small tolerance
         {
             Interactions playerInteractions = player.GetComponent<Interactions>();
             if (playerInteractions != null)
