@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 
-
 public class EnemyAI : MonoBehaviour
 {
     public float healthAmount = 100f;
@@ -13,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     public float attackRange = 1.5f;
     public float attackCooldown = 2f;
     public float stopOffset = 0.4f;
+    public float attackDamage = 10f;    // Damage per attack
 
     private NavMeshAgent agent;
     private GameObject player;
@@ -35,7 +35,6 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(healthAmount);
         if (isDead) return;
 
         if (!playerDetected)
@@ -141,37 +140,40 @@ public class EnemyAI : MonoBehaviour
 
     void Die()
     {
-        // Destroy(gameObject, 7f);
         animator.SetBool("alive", false);
         isDead = true;
 
-        // Stop all movement
         agent.isStopped = true;
         agent.ResetPath();
 
-        // Stop all animation triggers and booleans
         animator.ResetTrigger("attack");
         animator.SetBool("walk", false);
-
-        // Play death animation
         animator.Play("death", 0, 0f);
 
-        // StartCoroutine(kill());
-        
-
-
+        StartCoroutine(Kill());
     }
 
-         IEnumerator kill()
+    IEnumerator Kill()
     {
-        yield return new WaitForSeconds(5f);
-        GetComponent<NavMeshAgent>().enabled = false;
-        GetComponent<Collider>().enabled = false;
-        // this.enabled = false;
-
+        yield return new WaitForSeconds(1.75f);
+        transform.Find("coins").gameObject.SetActive(true);
     }
 
+    // This function must be called by an animation event on the attack animation at the exact hit frame
+    public void DealDamage(float animDamage)
+    {
+        if (player == null) return;
 
+        // Check if player is still in attack range (optional but recommended)
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (distanceToPlayer <= attackRange + 0.5f) // a small tolerance
+        {
+            Interactions playerInteractions = player.GetComponent<Interactions>();
+            if (playerInteractions != null)
+            {
+                playerInteractions.TakeDamage(animDamage);
+                Debug.Log("Enemy dealt damage to player.");
+            }
+        }
+    }
 }
-
-

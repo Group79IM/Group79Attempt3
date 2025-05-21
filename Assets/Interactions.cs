@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-// using Cinemachine;
 
 
 public class Interactions : MonoBehaviour
@@ -12,37 +8,36 @@ public class Interactions : MonoBehaviour
     public float healthAmount = 100f;
     public Image healthBar;
 
-
-
-     void Start()
-    {  
-        }
-
-
-    void Update()
+void Update()
+{
+    if (healthAmount <= 0)
     {
-
-    }   
-
- 
-
-    void OnTriggerStay(Collider other)
-    {   
-        // checks if the player is in a damaging collider (
-        if (other.CompareTag("Damages")) 
-        {
-            TakeDamage(0.1f); // damages player at a rate
-        }
+        ReloadScene();
     }
-
-     void TakeDamage(float damage){
-        healthAmount -= damage;
-         healthBar.fillAmount = healthAmount / 100f;
-    }
-
-
-
-
 }
 
-   
+void ReloadScene()
+{
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+}
+
+    public void TakeDamage(float damage)
+    {
+        healthAmount -= damage;
+        healthAmount = Mathf.Clamp(healthAmount, 0f, 100f);
+        healthBar.fillAmount = healthAmount / 100f;
+
+        Debug.Log($"Player took {damage} damage, health now: {healthAmount}");
+
+        if (healthAmount <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Player died.");
+        // Add your player death logic here (disable movement, play animation, reload scene, etc.)
+    }
+}
