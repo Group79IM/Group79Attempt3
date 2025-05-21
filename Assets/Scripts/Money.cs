@@ -5,13 +5,15 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
     public int bankAccount = 0;
-    
-    public void AddMoney(int amount) {
+
+    public void AddMoney(int amount)
+    {
         bankAccount = bankAccount + amount;
         Debug.Log("Money: " + bankAccount);
     }
 
-    public void DecreaseMoney(int amount) {
+    public void DecreaseMoney(int amount)
+    {
         bankAccount = bankAccount - amount;
     }
 

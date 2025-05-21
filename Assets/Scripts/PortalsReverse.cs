@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Portals : MonoBehaviour
+public class PortalsReverse : MonoBehaviour
 {
     int currentSceneNum = 0;
 
@@ -18,7 +18,7 @@ public class Portals : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Portal Collided with Player!");
-            currentSceneNum++;
+            currentSceneNum--;
             SceneManager.LoadScene(currentSceneNum);
             Debug.Log("Current Scene Number: " + currentSceneNum);
         }

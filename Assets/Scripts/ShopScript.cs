@@ -11,6 +11,7 @@ public class ShopScript : MonoBehaviour
     [SerializeField] private GameObject gameObject;
     [SerializeField] private GameObject moneyObject;
     [SerializeField] private bool shopOpen = false;
+    [SerializeField] private bool playerInShop = false;
     public TMP_Text coinNumText;
     private Money moneyScript;
 
@@ -48,6 +49,12 @@ public class ShopScript : MonoBehaviour
     }
     public void ShopManagement(InputAction.CallbackContext context)
     {
+        if (!playerInShop)
+        {
+            Debug.Log("Player not in shop");
+            return;
+        }
+
         if (shopOpen == false)
         {
             shopOpen = true;
@@ -59,8 +66,28 @@ public class ShopScript : MonoBehaviour
             CloseShop();
         }
     }
+    // Detecting when the player has entered the shop
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInShop = true;
+            Debug.Log("Player in shop");
+        }
+    }
+    // Detecting when the player leaves the shop
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInShop = false;
+            Debug.Log("Player left shop");
+        }
+    }
     void Update()
     {
+        // Update the coin number text in the shop
         coinNumText.text = moneyScript.bankAccount.ToString();
+        // Debug.Log("Money: " + moneyScript.bankAccount);
     }
 }
