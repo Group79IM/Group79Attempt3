@@ -1,0 +1,44 @@
+using System.Collections;
+using UnityEngine;
+
+public class SimpleLaserController : MonoBehaviour
+{
+    [Tooltip("Assign the Laser Cylinder gameobject (child of Gun) here")]
+    public GameObject laserCylinder;
+
+    public float burstDuration = 0.3f;    // How long laser stays active per burst
+    public float cooldown = 0.5f;         // Cooldown between bursts
+    public float damageAmount = 10f;      // Damage dealt per contact
+
+    private bool canShoot = true;
+
+    void Start()
+    {
+        if (laserCylinder != null)
+            laserCylinder.SetActive(false);
+        else
+            Debug.LogWarning("LaserCylinder is not assigned!");
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButton(0) && canShoot)
+        {
+            StartCoroutine(FireBurst());
+        }
+    }
+
+    IEnumerator FireBurst()
+    {
+        canShoot = false;
+        laserCylinder.SetActive(true);
+
+        yield return new WaitForSeconds(burstDuration);
+
+        laserCylinder.SetActive(false);
+
+        yield return new WaitForSeconds(cooldown);
+
+        canShoot = true;
+    }
+}

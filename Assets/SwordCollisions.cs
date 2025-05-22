@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SwordCollisions : MonoBehaviour
 {
+
+    public float swordDamage = 20f;
+
     public WeaponController wc;
 
     private bool hasHit = false;  // Tracks if we've hit during current swing
@@ -22,7 +25,7 @@ public class SwordCollisions : MonoBehaviour
                 enemyAnimator.SetTrigger("hit");
 
             if (enemy != null)
-                enemy.TakeDamage(20f);
+                enemy.TakeDamage(swordDamage);
 
             hasHit = true;  // Mark that we've already hit this swing
         }
