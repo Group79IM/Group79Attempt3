@@ -68,7 +68,14 @@ public class EnemyAI : MonoBehaviour
 
             if (Time.time - lastAttackTime >= attackCooldown)
             {
-                animator.SetTrigger("attack");
+                if (Random.value <= 0.25f){
+                    animator.SetTrigger("attack2");
+                }
+                else
+                {
+                    animator.SetTrigger("attack");
+                }
+                
                 lastAttackTime = Time.time;
             }
         }
@@ -148,6 +155,7 @@ public class EnemyAI : MonoBehaviour
         agent.ResetPath();
 
         animator.ResetTrigger("attack");
+        animator.ResetTrigger("attack2");
         animator.SetBool("walk", false);
         animator.Play("death", 0, 0f);
 
@@ -160,7 +168,7 @@ public class EnemyAI : MonoBehaviour
         transform.Find("coins").gameObject.SetActive(true);
     }
 
-    // This function must be called by an animation event on the attack animation at the exact hit frame
+    // This function must be called by an animation event on the fk animation at the exact hit frame
     public void DealDamage(float animDamage)
     {
         if (player == null) return;
@@ -173,7 +181,6 @@ public class EnemyAI : MonoBehaviour
             if (playerInteractions != null)
             {
                 playerInteractions.TakeDamage(animDamage);
-                Debug.Log("Enemy dealt damage to player.");
             }
         }
     }

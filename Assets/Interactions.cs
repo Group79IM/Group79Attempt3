@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Interactions : MonoBehaviour
 {
-    public float healthAmount = 100f;
+    public float healthAmount = 100;
     public Image healthBar;
 
 void Update()
@@ -25,10 +25,7 @@ void ReloadScene()
     {
         healthAmount -= damage;
         healthAmount = Mathf.Clamp(healthAmount, 0f, 100f);
-        healthBar.fillAmount = healthAmount / 100f;
-
-        Debug.Log($"Player took {damage} damage, health now: {healthAmount}");
-
+        healthBar.fillAmount = healthAmount / 100;
         if (healthAmount <= 0)
         {
             Die();
