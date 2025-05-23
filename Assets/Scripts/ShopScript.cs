@@ -15,8 +15,8 @@ public class ShopScript : MonoBehaviour
     [SerializeField] private Button gunOneShopButton;
     [SerializeField] private Button healthPackShopButton;
     [SerializeField] private Button TBCShopButton;
-    [SerializeField] private bool shopOpen = false;
     [SerializeField] private bool playerInShop = false;
+    public bool shopOpen = false;
 
     public TMP_Text coinNumText;
     private Money moneyScript;

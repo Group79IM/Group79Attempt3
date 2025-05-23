@@ -16,6 +16,9 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
 {
+
+    [SerializeField] private AudioClip playerJumpSound;
+
     // made the unity camera a cinemachine virtual camera to work with the other VCs
     public Camera playerCamera;
 
@@ -53,11 +56,12 @@ public class FPSController : MonoBehaviour
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
- 
-    
+
+
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
+            AudioSource.PlayClipAtPoint(playerJumpSound, transform.position, 1f);
         }
         else
         {

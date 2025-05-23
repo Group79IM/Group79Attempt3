@@ -8,7 +8,7 @@ public class SceneChanger : MonoBehaviour
 {
     [SerializeField] private Group79Game input;
     [SerializeField] private GameObject gameObject;
-    [SerializeField] private bool menuOpen = false;
+    public bool menuOpen = false;
     private void Awake()
     {
         input = new Group79Game();
@@ -34,7 +34,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void SettingsScene()
     {
-        SceneManager.LoadScene(1);
+        // SceneManager.LoadScene(1);
     }
     public void Pause()
     {
@@ -48,11 +48,11 @@ public class SceneChanger : MonoBehaviour
     }
     public void WinningScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void DeathScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
     public void Disable()
     {
@@ -64,17 +64,21 @@ public class SceneChanger : MonoBehaviour
     }
     public void EgyptScene()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
     public void FuturisticScene()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(2);
     }
-    public void PauseMenuManagement(InputAction.CallbackContext context) {
-        if (menuOpen == false) {
+    public void PauseMenuManagement(InputAction.CallbackContext context)
+    {
+        if (menuOpen == false)
+        {
             menuOpen = true;
             Pause();
-        } else {
+        }
+        else
+        {
             menuOpen = false;
             UnPause();
         }
