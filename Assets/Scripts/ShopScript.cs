@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using TMPro;
 using System;
 
@@ -10,8 +11,13 @@ public class ShopScript : MonoBehaviour
     [SerializeField] private Group79Game input;
     [SerializeField] private GameObject gameObject;
     [SerializeField] private GameObject moneyObject;
+    [SerializeField] private Button swordOneShopButton;
+    [SerializeField] private Button gunOneShopButton;
+    [SerializeField] private Button healthPackShopButton;
+    [SerializeField] private Button TBCShopButton;
     [SerializeField] private bool shopOpen = false;
     [SerializeField] private bool playerInShop = false;
+
     public TMP_Text coinNumText;
     private Money moneyScript;
 
@@ -88,6 +94,36 @@ public class ShopScript : MonoBehaviour
     {
         // Update the coin number text in the shop
         coinNumText.text = moneyScript.bankAccount.ToString();
-        // Debug.Log("Money: " + moneyScript.bankAccount);
+
+        if (moneyScript.bankAccount >= 20)
+        {
+            swordOneShopButton.interactable = true;
+        }
+        else
+        {
+            swordOneShopButton.interactable = false;
+        }
+
+        if (moneyScript.bankAccount >= 50)
+        {
+            gunOneShopButton.interactable = true;
+        }
+        else
+        {
+            gunOneShopButton.interactable = false;
+        }
+
+        if (moneyScript.bankAccount >= 10)
+        {
+            healthPackShopButton.interactable = true;
+        }
+        else
+        {
+            healthPackShopButton.interactable = false;
+        }
+
+        TBCShopButton.interactable = false;
     }
+
+
 }
