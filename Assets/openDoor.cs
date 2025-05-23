@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class openDoor : MonoBehaviour
 {
-    public Animation animationComponent;
-    public string clipName = "doorOpening";
+    public Animator animator;
+   
+    void Start(){
+         animator = GetComponent<Animator>();
+    }
     
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            animationComponent.Play(clipName);
+            animator.SetBool("open", true);
+        }
+    }
+
+     void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            animator.SetBool("open", false);
         }
     }
 
