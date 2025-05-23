@@ -6,7 +6,7 @@ public class RandomWalker : MonoBehaviour
     public float walkRadius = 10f;
     public float minIdleTime = 1f;
     public float maxIdleTime = 3f;
-    public float destinationTimeout = 5f; // Time after which to pick new destination if stuck
+    public float destinationTimeout = 5f;
 
     private NavMeshAgent agent;
     private Animator animator;
@@ -45,12 +45,12 @@ public class RandomWalker : MonoBehaviour
         }
         else
         {
-            // Agent is walking, check if stuck
+        
             destinationTimer += Time.deltaTime;
 
             if (destinationTimer >= destinationTimeout)
             {
-                // Pick new destination if taking too long
+     
                 ChooseNewDestination();
                 destinationTimer = 0f;
             }

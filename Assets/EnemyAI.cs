@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     public float attackRange = 1.5f;
     public float attackCooldown = 2f;
     public float stopOffset = 0.4f;
-    public float attackDamage = 10f;    // Damage per attack
+    public float attackDamage = 10f;   
 
     private NavMeshAgent agent;
     private GameObject player;
@@ -168,14 +168,13 @@ public class EnemyAI : MonoBehaviour
         transform.Find("coins").gameObject.SetActive(true);
     }
 
-    // This function must be called by an animation event on the fk animation at the exact hit frame
+
     public void DealDamage(float animDamage)
     {
         if (player == null) return;
 
-        // Check if player is still in attack range (optional but recommended)
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if (distanceToPlayer <= attackRange + attackRangeTolerance) // a small tolerance
+        if (distanceToPlayer <= attackRange + attackRangeTolerance) 
         {
             Interactions playerInteractions = player.GetComponent<Interactions>();
             if (playerInteractions != null)

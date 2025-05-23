@@ -9,7 +9,7 @@ public class SwordCollisions : MonoBehaviour
 
     public WeaponController wc;
 
-    private bool hasHit = false;  // Tracks if we've hit during current swing
+    private bool hasHit = false;  
 
     private void OnTriggerStay(Collider other)
     {
@@ -19,7 +19,7 @@ public class SwordCollisions : MonoBehaviour
             EnemyAI enemy = other.GetComponent<EnemyAI>();
 
             if (enemy != null && enemyAnimator != null && !enemyAnimator.GetBool("alive"))
-                return;  // Don't hit dead enemies
+                return;  
 
             if (enemyAnimator != null)
                 enemyAnimator.SetTrigger("hit");
@@ -27,13 +27,13 @@ public class SwordCollisions : MonoBehaviour
             if (enemy != null)
                 enemy.TakeDamage(swordDamage);
 
-            hasHit = true;  // Mark that we've already hit this swing
+            hasHit = true; 
         }
     }
 
     private void Update()
     {
-        // Reset when attack ends so we can hit again on next swing
+        
         if (!wc.isAttacking && hasHit)
         {
             hasHit = false;

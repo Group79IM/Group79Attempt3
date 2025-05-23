@@ -35,6 +35,6 @@ void ReloadScene()
     void Die()
     {
         Debug.Log("Player died.");
-        // Add your player death logic here (disable movement, play animation, reload scene, etc.)
+   
     }
 }

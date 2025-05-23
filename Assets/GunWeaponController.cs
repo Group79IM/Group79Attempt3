@@ -6,9 +6,8 @@ public class SimpleLaserController : MonoBehaviour
     [Tooltip("Assign the Laser Cylinder gameobject (child of Gun) here")]
     public GameObject laserCylinder;
 
-    public float burstDuration = 0.3f;    // How long laser stays active per burst
-    public float cooldown = 0.5f;         // Cooldown between bursts
-    public float damageAmount = 10f;      // Damage dealt per contact
+    public float burstDuration = 0.3f;   
+    public float damageAmount = 10f;    
 
     private bool canShoot = true;
 

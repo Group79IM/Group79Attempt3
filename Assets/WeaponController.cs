@@ -29,21 +29,13 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
-        //sword hit
+
         if (Input.GetMouseButtonDown(0) && canAttack )
         {
             StartCoroutine(Attack());
         }
 
-        //gun shooting
-        // if (Input.GetMouseButtonDown(0) && swordEquipped == false)
-        // {
-        //     shoot();
-        // }
-        // if (Input.GetMouseButtonUp(0) && swordEquipped == false)
-        // {
-        //     stopShooting();
-        // }
+    
 
         // //weapon switch
         // if (Input.GetKeyDown(KeyCode.Alpha1) && swordEquipped == false)

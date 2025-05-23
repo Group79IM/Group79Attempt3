@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LaserTrigger : MonoBehaviour
 {
-    public SimpleLaserController laserController; // assign in inspector or find on parent
+    public SimpleLaserController laserController; 
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class LaserTrigger : MonoBehaviour
         if (laserController != null && laserController.laserCylinder.activeSelf && other.CompareTag("Damages"))
         {
             Animator enemyAnim = other.GetComponent<Animator>();
-            var enemyScript = other.GetComponent<EnemyAI>();  // Your enemy script
+            var enemyScript = other.GetComponent<EnemyAI>();  
 
             if (enemyScript != null && enemyAnim != null)
             {
