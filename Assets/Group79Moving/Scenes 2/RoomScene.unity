@@ -6314,6 +6314,7 @@ MonoBehaviour:
   isAttacking: 0
   swordEquipped: 0
   animationLength: 0
+  swordWhoosh: {fileID: 0}
 --- !u!95 &399245801
 Animator:
   serializedVersion: 5
@@ -7779,6 +7780,8 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 1
+  swordLight: {fileID: 8300000, guid: 2865b4b3f7fcc49428d0e54eaf221b53, type: 3}
+  coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!95 &520625171
 Animator:
   serializedVersion: 5
@@ -8944,6 +8947,7 @@ MonoBehaviour:
   isAttacking: 0
   swordEquipped: 0
   animationLength: 0
+  swordWhoosh: {fileID: 0}
 --- !u!95 &683681277
 Animator:
   serializedVersion: 5
@@ -17984,6 +17988,8 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 0.5
+  swordLight: {fileID: 0}
+  coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!195 &1299158144
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -21284,6 +21290,7 @@ MonoBehaviour:
   isAttacking: 0
   swordEquipped: 0
   animationLength: 0
+  swordWhoosh: {fileID: 0}
 --- !u!95 &1556172432
 Animator:
   serializedVersion: 5
@@ -23270,6 +23277,7 @@ MonoBehaviour:
   burstDuration: 0.3
   cooldown: 2
   damageAmount: 3
+  gunOneShot: {fileID: 8300000, guid: 40610252660122e4daba453b5e2fe2e6, type: 3}
 --- !u!95 &1716250955
 Animator:
   serializedVersion: 5
@@ -26795,6 +26803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80ecb3b56dcb4b298e38dc8c7cfe14f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerJumpSound: {fileID: 8300000, guid: 0809207531f357d45b4c1e865f032da1, type: 3}
+  footsteps: {fileID: 8300000, guid: 7604682de2236c749834f978870f6e68, type: 3}
   playerCamera: {fileID: 1336651563}
   walkSpeed: 2
   runSpeed: 5
@@ -26843,6 +26853,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthAmount: 100
   healthBar: {fileID: 1391946960}
+  playerDamage: {fileID: 8300000, guid: ef79713956c046149809ed2a5798d316, type: 3}
+  gong: {fileID: 8300000, guid: 883ec17519dd74a46b3ff74906093a9a, type: 3}
 --- !u!136 &1954576580
 CapsuleCollider:
   m_ObjectHideFlags: 0

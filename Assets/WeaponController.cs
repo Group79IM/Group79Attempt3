@@ -18,6 +18,7 @@ public class WeaponController : MonoBehaviour
     public bool swordEquipped = false;
 
     public float animationLength;
+    [SerializeField] private AudioClip swordWhoosh;
 
     void Start()
     {
@@ -30,9 +31,10 @@ public class WeaponController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && canAttack )
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
             StartCoroutine(Attack());
+            AudioSource.PlayClipAtPoint(swordWhoosh, transform.position, 1f);
         }
 
     

@@ -9,6 +9,7 @@ Reference
 
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 // using Cinemachine;
 
@@ -18,6 +19,7 @@ public class FPSController : MonoBehaviour
 {
 
     [SerializeField] private AudioClip playerJumpSound;
+    [SerializeField] private AudioClip footsteps;
 
     // made the unity camera a cinemachine virtual camera to work with the other VCs
     public Camera playerCamera;
@@ -74,6 +76,7 @@ public class FPSController : MonoBehaviour
         }
  
         characterController.Move(moveDirection * Time.deltaTime);
+        // AudioSource.PlayClipAtPoint(footsteps, transform.position, 1f);
  
         if (canMove)
         {

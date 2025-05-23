@@ -7,6 +7,8 @@ public class Interactions : MonoBehaviour
 {
     public float healthAmount = 100;
     public Image healthBar;
+    [SerializeField] private AudioClip playerDamage;
+    [SerializeField] private AudioClip gong;
 
 void Update()
 {
@@ -24,10 +26,12 @@ void ReloadScene()
     public void TakeDamage(float damage)
     {
         healthAmount -= damage;
+        AudioSource.PlayClipAtPoint(playerDamage, transform.position, 1f);
         healthAmount = Mathf.Clamp(healthAmount, 0f, 100f);
         healthBar.fillAmount = healthAmount / 100;
         if (healthAmount <= 0)
         {
+            AudioSource.PlayClipAtPoint(gong, transform.position, 1f);
             Die();
         }
     }
@@ -35,6 +39,5 @@ void ReloadScene()
     void Die()
     {
         Debug.Log("Player died.");
-   
     }
 }

@@ -25,6 +25,8 @@ public class EnemyAI : MonoBehaviour
 
     private bool isDead = false;
     private bool playerDetected = false;
+    [SerializeField] private AudioClip swordLight;
+    [SerializeField] private AudioClip coinDrop;
 
     void Start()
     {
@@ -139,6 +141,7 @@ public class EnemyAI : MonoBehaviour
         if (isDead) return;
 
         healthAmount -= damage;
+        AudioSource.PlayClipAtPoint(swordLight, transform.position, 1f);
 
         if (healthAmount <= 0f)
         {
@@ -160,6 +163,7 @@ public class EnemyAI : MonoBehaviour
         animator.Play("death", 0, 0f);
 
         StartCoroutine(Kill());
+        AudioSource.PlayClipAtPoint(coinDrop, transform.position, 1f);
     }
 
     IEnumerator Kill()
