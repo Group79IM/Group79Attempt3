@@ -68,7 +68,7 @@ public class EnemyAI : MonoBehaviour
 
             if (Time.time - lastAttackTime >= attackCooldown)
             {
-                if (Random.value <= 0.25f){
+                if (Random.value <= 0.32f){
                     animator.SetTrigger("attack2");
                 }
                 else
