@@ -7,6 +7,7 @@ public class SimpleLaserController : MonoBehaviour
     public GameObject laserCylinder;
 
     public float burstDuration = 0.3f;   
+    public float cooldown = 0.5f;       
     public float damageAmount = 10f;    
 
     private bool canShoot = true;
