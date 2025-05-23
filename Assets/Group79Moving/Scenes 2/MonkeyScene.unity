@@ -9040,6 +9040,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 7124aec8bc349fd4690e8b591f13b57f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7124aec8bc349fd4690e8b591f13b57f, type: 3}
       propertyPath: m_Name
       value: GreekPortal
@@ -80229,7 +80233,7 @@ Transform:
   m_GameObject: {fileID: 2026832265}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.000008, y: 0.32508087, z: -74.70001}
+  m_LocalPosition: {x: 30.000008, y: 0.45, z: -74.70001}
   m_LocalScale: {x: 14, y: 0.711702, z: 7.103728}
   m_ConstrainProportionsScale: 0
   m_Children: []
