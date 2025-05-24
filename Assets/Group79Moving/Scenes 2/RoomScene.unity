@@ -10529,9 +10529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f21212f2a783a4398bcbae3d42b785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  doorOpen: {fileID: 0}
-  doorClose: {fileID: 0}
+  animator: {fileID: 1289144106}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!65 &670734038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21253,7 +21253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f21212f2a783a4398bcbae3d42b785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 670734036}
   doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
   doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!95 &1289144106
@@ -28733,9 +28733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f21212f2a783a4398bcbae3d42b785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  doorOpen: {fileID: 0}
-  doorClose: {fileID: 0}
+  animator: {fileID: 670734036}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!95 &1758586062
 Animator:
   serializedVersion: 5
