@@ -7262,7 +7262,7 @@ PrefabInstance:
     - target: {fileID: 740320733675711972, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
       propertyPath: laserSound
       value: 
-      objectReference: {fileID: 8300000, guid: ef79713956c046149809ed2a5798d316, type: 3}
+      objectReference: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
     - target: {fileID: 5086278208472105827, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -25647,6 +25647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopZone
       objectReference: {fileID: 0}
+    - target: {fileID: 6324505503498326429, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
+      propertyPath: shopSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 78419f98379502c4dbfb2774bc94e7c1, type: 3}
     - target: {fileID: 6324505503498326429, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
       propertyPath: gameObject
       value: 
