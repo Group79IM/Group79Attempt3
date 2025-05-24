@@ -11,7 +11,8 @@ public class SimpleLaserController : MonoBehaviour
     public float damageAmount = 10f;    
 
     private bool canShoot = true;
-    [SerializeField] private AudioClip gunOneShot;
+    [SerializeField] private AudioClip laserSound;
+    
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class SimpleLaserController : MonoBehaviour
         if (Input.GetMouseButton(0) && canShoot)
         {
             StartCoroutine(FireBurst());
+            AudioSource.PlayClipAtPoint(laserSound, transform.position, 1f);
         }
     }
 
@@ -41,6 +43,6 @@ public class SimpleLaserController : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
 
         canShoot = true;
-        AudioSource.PlayClipAtPoint(gunOneShot, transform.position, 1f);
+        
     }
 }

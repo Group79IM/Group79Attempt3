@@ -1745,6 +1745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f07d800f99388449775e9eeb5038d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalSound: {fileID: 0}
 --- !u!54 &105697498
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8527,6 +8528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 0}
+  buttonClick: {fileID: 0}
   menuOpen: 0
 --- !u!4 &628414066
 Transform:
@@ -8870,6 +8872,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  doorOpen: {fileID: 0}
+  doorClose: {fileID: 0}
 --- !u!65 &670734038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11144,6 +11148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2ee4973774fc24e927f8dbe8903572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalSound: {fileID: 0}
 --- !u!1001 &810793037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17000,6 +17005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f07d800f99388449775e9eeb5038d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalSound: {fileID: 0}
 --- !u!65 &1258051054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17789,6 +17795,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!95 &1289144106
 Animator:
   serializedVersion: 5
@@ -17988,7 +17996,7 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 0.5
-  swordLight: {fileID: 0}
+  swordLight: {fileID: 8300000, guid: 2865b4b3f7fcc49428d0e54eaf221b53, type: 3}
   coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!195 &1299158144
 NavMeshAgent:
@@ -20040,6 +20048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!65 &1430686162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21290,7 +21300,7 @@ MonoBehaviour:
   isAttacking: 0
   swordEquipped: 0
   animationLength: 0
-  swordWhoosh: {fileID: 0}
+  swordWhoosh: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
 --- !u!95 &1556172432
 Animator:
   serializedVersion: 5
@@ -23277,7 +23287,7 @@ MonoBehaviour:
   burstDuration: 0.3
   cooldown: 2
   damageAmount: 3
-  gunOneShot: {fileID: 8300000, guid: 40610252660122e4daba453b5e2fe2e6, type: 3}
+  laserSound: {fileID: 0}
 --- !u!95 &1716250955
 Animator:
   serializedVersion: 5
@@ -23899,6 +23909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  doorOpen: {fileID: 0}
+  doorClose: {fileID: 0}
 --- !u!95 &1758586062
 Animator:
   serializedVersion: 5
@@ -24773,6 +24785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f07d800f99388449775e9eeb5038d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalSound: {fileID: 0}
 --- !u!1 &1816154655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5264494780485838307, guid: c260e93f0bb21154eb767de9b2e54d02, type: 3}

@@ -3,7 +3,9 @@ guid: 294685c3eb0d84e55af42b468856fdf5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - laserController: {instanceID: 0}
+  - gunOneShot: {fileID: 8300000, guid: 40610252660122e4daba453b5e2fe2e6, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

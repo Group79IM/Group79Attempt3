@@ -76,8 +76,9 @@ public class FPSController : MonoBehaviour
         }
  
         characterController.Move(moveDirection * Time.deltaTime);
+        //need an if moving then play footsteps otherwise no sound
         // AudioSource.PlayClipAtPoint(footsteps, transform.position, 1f);
- 
+
         if (canMove)
         {
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;

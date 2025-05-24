@@ -5,6 +5,7 @@ public class LaserTrigger : MonoBehaviour
 {
     public SimpleLaserController laserController; 
 
+
     private void Start()
     {
         if (laserController == null)
@@ -16,7 +17,7 @@ public class LaserTrigger : MonoBehaviour
         if (laserController != null && laserController.laserCylinder.activeSelf && other.CompareTag("Damages"))
         {
             Animator enemyAnim = other.GetComponent<Animator>();
-            var enemyScript = other.GetComponent<EnemyAI>();  
+            var enemyScript = other.GetComponent<EnemyAI>();
 
             if (enemyScript != null && enemyAnim != null)
             {

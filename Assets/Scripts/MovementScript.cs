@@ -11,6 +11,7 @@ public class MovementScript : MonoBehaviour
     
     [SerializeField] float speed = 10f;
     [SerializeField] Rigidbody rigidBody;
+    [SerializeField] private AudioClip footsteps;
 
     private Vector2 currentMovement;
     private bool movePressed;
@@ -34,9 +35,11 @@ public class MovementScript : MonoBehaviour
         Movement();
     }
 
-    void Movement() {
+    void Movement()
+    {
         Vector3 horizontalMovement = new Vector3(currentMovement.x * speed, rigidBody.velocity.y, currentMovement.y * speed);
-        rigidBody.velocity = transform.TransformDirection(horizontalMovement) ;
+        rigidBody.velocity = transform.TransformDirection(horizontalMovement);
+        AudioSource.PlayClipAtPoint(footsteps, transform.position, 1f);
     }
 
     void OnMove(InputValue value) {

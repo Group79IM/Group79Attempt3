@@ -5,6 +5,8 @@ using UnityEngine;
 public class openDoor : MonoBehaviour
 {
     public Animator animator;
+    [SerializeField] private AudioClip doorOpen;
+    [SerializeField] private AudioClip doorClose;
    
     void Start(){
          animator = GetComponent<Animator>();
@@ -14,7 +16,8 @@ public class openDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            animator.SetBool("open", true);
+            AudioSource.PlayClipAtPoint(doorOpen, transform.position, 1f);
+            animator.SetBool("open", true);    
         }
     }
 
@@ -22,7 +25,9 @@ public class openDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioSource.PlayClipAtPoint(doorClose, transform.position, 1f);
             animator.SetBool("open", false);
+            
         }
     }
 

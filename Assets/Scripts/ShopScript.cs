@@ -16,6 +16,9 @@ public class ShopScript : MonoBehaviour
     [SerializeField] private Button healthPackShopButton;
     [SerializeField] private Button TBCShopButton;
     [SerializeField] private bool playerInShop = false;
+    [SerializeField] private AudioClip shopSound;
+    [SerializeField] private AudioClip buttonSound;
+
     public bool shopOpen = false;
 
     public TMP_Text coinNumText;
@@ -77,6 +80,7 @@ public class ShopScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
             playerInShop = true;
             Debug.Log("Player in shop");
         }
@@ -86,6 +90,8 @@ public class ShopScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
+            playerInShop = true;
             playerInShop = false;
             Debug.Log("Player left shop");
         }

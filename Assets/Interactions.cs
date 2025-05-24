@@ -32,6 +32,7 @@ void ReloadScene()
         if (healthAmount <= 0)
         {
             AudioSource.PlayClipAtPoint(gong, transform.position, 1f);
+            //wait so sound can play
             Die();
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PortalsReverse : MonoBehaviour
 {
+    [SerializeField] private AudioClip portalSound;
     int currentSceneNum = 0;
 
     void Awake()
@@ -21,6 +22,7 @@ public class PortalsReverse : MonoBehaviour
             currentSceneNum--;
             SceneManager.LoadScene(currentSceneNum);
             Debug.Log("Current Scene Number: " + currentSceneNum);
+            AudioSource.PlayClipAtPoint(portalSound, transform.position, 1f);
         }
     }
 }
