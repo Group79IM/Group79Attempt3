@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Money
   - ShopArea
+  - healthpack
+  - coins
   layers:
   - Default
   - TransparentFX
