@@ -10,18 +10,20 @@ public class Interactions : MonoBehaviour
     [SerializeField] private AudioClip playerDamage;
     [SerializeField] private AudioClip gong;
 
-void Update()
-{
-    if (healthAmount <= 0)
+    void Update()
     {
-        ReloadScene();
+        if (healthAmount <= 0)
+        {
+            AudioSource.PlayClipAtPoint(gong, transform.position, 1f);
+            //wait so sound can play
+            ReloadScene();
+        }
     }
-}
 
-void ReloadScene()
-{
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-}
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void TakeDamage(float damage)
     {
@@ -30,9 +32,7 @@ void ReloadScene()
         healthAmount = Mathf.Clamp(healthAmount, 0f, 100f);
         healthBar.fillAmount = healthAmount / 100;
         if (healthAmount <= 0)
-        {
-            AudioSource.PlayClipAtPoint(gong, transform.position, 1f);
-            //wait so sound can play
+        {          
             Die();
         }
     }

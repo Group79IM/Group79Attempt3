@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour
 
     private bool isDead = false;
     private bool playerDetected = false;
-    [SerializeField] private AudioClip swordLight;
+    [SerializeField] private AudioClip enemyDamage;
     [SerializeField] private AudioClip coinDrop;
 
     void Start()
@@ -141,7 +141,7 @@ public class EnemyAI : MonoBehaviour
         if (isDead) return;
 
         healthAmount -= damage;
-        AudioSource.PlayClipAtPoint(swordLight, transform.position, 1f);
+        
 
         if (healthAmount <= 0f)
         {
@@ -184,6 +184,7 @@ public class EnemyAI : MonoBehaviour
             if (playerInteractions != null)
             {
                 playerInteractions.TakeDamage(animDamage);
+                
             }
         }
     }
