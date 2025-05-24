@@ -9268,7 +9268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 100
-  animator: {fileID: 0}
+  animator: {fileID: 520625171}
   patrolRadius: 5
   detectionRadius: 7
   attackRange: 1.75
@@ -9276,7 +9276,11 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 1
+<<<<<<< HEAD
   enemyDamage: {fileID: 0}
+=======
+  enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
+>>>>>>> 20dcba38faa88967f7b7a56472c811c1f40e3abc
   coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!95 &520625171
 Animator:
@@ -10654,9 +10658,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f21212f2a783a4398bcbae3d42b785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  doorOpen: {fileID: 0}
-  doorClose: {fileID: 0}
+  animator: {fileID: 1289144106}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!65 &670734038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21373,7 +21377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f21212f2a783a4398bcbae3d42b785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 670734036}
   doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
   doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!95 &1289144106
@@ -21567,7 +21571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 100
-  animator: {fileID: 0}
+  animator: {fileID: 1299158147}
   patrolRadius: 5
   detectionRadius: 7
   attackRange: 1.5
@@ -21575,7 +21579,11 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 0.5
+<<<<<<< HEAD
   enemyDamage: {fileID: 0}
+=======
+  enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
+>>>>>>> 20dcba38faa88967f7b7a56472c811c1f40e3abc
   coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!195 &1299158144
 NavMeshAgent:
@@ -21602,6 +21610,11 @@ NavMeshAgent:
 --- !u!4 &1299158146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
+  m_PrefabInstance: {fileID: 1693985797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1299158147 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
   m_PrefabInstance: {fileID: 1693985797}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305739663
@@ -27522,6 +27535,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
       propertyPath: m_TagString
       value: Damages
       objectReference: {fileID: 0}
@@ -27963,7 +27980,7 @@ MonoBehaviour:
   burstDuration: 0.3
   cooldown: 2
   damageAmount: 3
-  laserSound: {fileID: 0}
+  laserSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
 --- !u!95 &1716250955
 Animator:
   serializedVersion: 5
@@ -28584,9 +28601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f21212f2a783a4398bcbae3d42b785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  doorOpen: {fileID: 0}
-  doorClose: {fileID: 0}
+  animator: {fileID: 670734036}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!95 &1758586062
 Animator:
   serializedVersion: 5
