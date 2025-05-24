@@ -39,20 +39,27 @@ public class ShopScript : MonoBehaviour
     void OnEnable()
     {
         input.GameUI.Enable();
+        
     }
     void OnDisable()
     {
         input.GameUI.Disable();
+        
     }
     public void OpenShop()
     {
         Time.timeScale = 0f;
         Enable();
+        AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
+        Debug.Log("open shop");
     }
     public void CloseShop()
     {
+        
         Time.timeScale = 1f;
         Disable();
+        Debug.Log("close shop");
+        AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
     }
     public void Disable()
     {
@@ -66,10 +73,10 @@ public class ShopScript : MonoBehaviour
     {
         if (moneyScript.bankAccount >= 20)
         {
-            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
             moneyScript.bankAccount -= 20;
             playerBoughtSword = true;
             playerUsingSword = true;
+            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
             Debug.Log("Bought Sword");
         }
         else
@@ -101,7 +108,7 @@ public class ShopScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
+            
             playerInShop = true;
             Debug.Log("Player in shop");
         }
@@ -111,7 +118,6 @@ public class ShopScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
             playerInShop = true;
             playerInShop = false;
             Debug.Log("Player left shop");
@@ -121,23 +127,31 @@ public class ShopScript : MonoBehaviour
         // Update the coin number text in the shop
         coinNumText.text = moneyScript.bankAccount.ToString();
 
-        if (playerBoughtSword) {
+        if (playerBoughtSword)
+        {
+            swordOneShopButton.interactable = true;
+            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
+        }
+        else if (!playerBoughtSword && (moneyScript.bankAccount >= 20))
+        {
             swordOneShopButton.interactable = true;
         }
-        else if (!playerBoughtSword && (moneyScript.bankAccount >= 20)) {
-            swordOneShopButton.interactable = true;
-        }
-        else {
+        else
+        {
             swordOneShopButton.interactable = false;
         }
 
-        if (playerBoughtGun) {
+        if (playerBoughtGun)
+        {
+            gunOneShopButton.interactable = true;
+            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
+        }
+        else if (!playerBoughtGun && (moneyScript.bankAccount >= 50))
+        {
             gunOneShopButton.interactable = true;
         }
-        else if (!playerBoughtGun && (moneyScript.bankAccount >= 50)) {
-            gunOneShopButton.interactable = true;
-        }
-        else {
+        else
+        {
             gunOneShopButton.interactable = false;
         }
 

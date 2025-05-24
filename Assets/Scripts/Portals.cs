@@ -13,6 +13,8 @@ public class Portals : MonoBehaviour
         currentSceneNum = SceneManager.GetActiveScene().buildIndex;
     }
 
+    
+
     //  Detecting whether the player has entered the portal
     void OnCollisionEnter(Collision collision)
     {

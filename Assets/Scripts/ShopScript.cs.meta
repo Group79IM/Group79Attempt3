@@ -3,7 +3,16 @@ guid: fa7ece64689ab7a4b8e31511c5d38579
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gameObject: {instanceID: 0}
+  - moneyObject: {instanceID: 0}
+  - swordOneShopButton: {instanceID: 0}
+  - gunOneShopButton: {instanceID: 0}
+  - healthPackShopButton: {instanceID: 0}
+  - TBCShopButton: {instanceID: 0}
+  - shopSound: {fileID: 8300000, guid: 78419f98379502c4dbfb2774bc94e7c1, type: 3}
+  - buttonSound: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
+  - coinNumText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

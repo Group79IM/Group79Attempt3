@@ -7259,10 +7259,18 @@ PrefabInstance:
       propertyPath: swordWhoosh
       value: 
       objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
+    - target: {fileID: 509512961022982983, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
+      propertyPath: swordWhoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: 2865b4b3f7fcc49428d0e54eaf221b53, type: 3}
     - target: {fileID: 740320733675711972, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
       propertyPath: laserSound
       value: 
       objectReference: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+    - target: {fileID: 4730997475087956119, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1391946960}
     - target: {fileID: 5086278208472105827, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -7271,6 +7279,10 @@ PrefabInstance:
       propertyPath: shopObject
       value: 
       objectReference: {fileID: 1964212485}
+    - target: {fileID: 8767707905298064553, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
+      propertyPath: swordWhoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
     - target: {fileID: 9115414959982365163, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
       propertyPath: m_LocalPosition.x
       value: 208.15
@@ -9286,7 +9298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 100
-  animator: {fileID: 0}
+  animator: {fileID: 520625171}
   patrolRadius: 5
   detectionRadius: 7
   attackRange: 1.75
@@ -9294,7 +9306,7 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 1
-  enemyDamage: {fileID: 0}
+  enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
   coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!95 &520625171
 Animator:
@@ -21745,7 +21757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 100
-  animator: {fileID: 0}
+  animator: {fileID: 1299158147}
   patrolRadius: 5
   detectionRadius: 7
   attackRange: 1.5
@@ -21753,7 +21765,7 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 0.5
-  enemyDamage: {fileID: 0}
+  enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
   coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!195 &1299158144
 NavMeshAgent:
@@ -21780,6 +21792,11 @@ NavMeshAgent:
 --- !u!4 &1299158146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
+  m_PrefabInstance: {fileID: 1693985797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1299158147 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
   m_PrefabInstance: {fileID: 1693985797}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305739663

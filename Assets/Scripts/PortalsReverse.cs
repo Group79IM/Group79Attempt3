@@ -13,16 +13,19 @@ public class PortalsReverse : MonoBehaviour
         currentSceneNum = SceneManager.GetActiveScene().buildIndex;
     }
 
+
     //  Detecting whether the player has entered the portal
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
+            AudioSource.PlayClipAtPoint(portalSound, transform.position, 1f);
             Debug.Log("Portal Collided with Player!");
             currentSceneNum--;
             SceneManager.LoadScene(currentSceneNum);
             Debug.Log("Current Scene Number: " + currentSceneNum);
-            AudioSource.PlayClipAtPoint(portalSound, transform.position, 1f);
+            
         }
     }
 }
