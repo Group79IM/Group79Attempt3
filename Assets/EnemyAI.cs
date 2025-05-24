@@ -165,12 +165,14 @@ public class EnemyAI : MonoBehaviour
 
         StartCoroutine(Kill());
         AudioSource.PlayClipAtPoint(coinDrop, transform.position, 1f);
+        Debug.Log("coin sound");
     }
 
     IEnumerator Kill()
     {
         yield return new WaitForSeconds(1.75f);
         transform.Find("coins").gameObject.SetActive(true);
+        Debug.Log("coins dropped");
     }
 
 
