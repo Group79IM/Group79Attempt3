@@ -20,6 +20,8 @@ public class FPSController : MonoBehaviour
 
     [SerializeField] private AudioClip playerJumpSound;
     [SerializeField] private AudioClip footsteps;
+    [SerializeField] private GameObject shopObject;
+    private ShopScript shopScript;
 
     // made the unity camera a cinemachine virtual camera to work with the other VCs
     public Camera playerCamera;
@@ -34,25 +36,29 @@ public class FPSController : MonoBehaviour
  
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
+
+
  
     public bool canMove = true;
  
     // beginning of code following 'All Things Game Dev'
     CharacterController characterController;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        shopScript = shopObject.GetComponent<ShopScript>();
     }
- 
+
     void Update()
     {
- 
+
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
- 
-        
+
+
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
@@ -69,12 +75,12 @@ public class FPSController : MonoBehaviour
         {
             moveDirection.y = movementDirectionY;
         }
- 
+
         if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
- 
+
         characterController.Move(moveDirection * Time.deltaTime);
         //need an if moving then play footsteps otherwise no sound
         // AudioSource.PlayClipAtPoint(footsteps, transform.position, 1f);
@@ -86,7 +92,25 @@ public class FPSController : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
+
+        // end of code following 'All Things Game Dev'
+
+        if (shopScript.shopOpen)
+        {
+            canMove = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            canMove = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1f;
+
+        }
     }
-    // end of code following 'All Things Game Dev'
+    
 }
  

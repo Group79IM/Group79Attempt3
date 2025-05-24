@@ -9,6 +9,8 @@ public class WeaponsManager : MonoBehaviour
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject moneyObject;
     [SerializeField] private GameObject shopObject;
+    [SerializeField] private GameObject swordPriceText;
+    [SerializeField] private GameObject gunPriceText;
     private Money moneyScript;
     private ShopScript shopScript;
 
@@ -23,7 +25,7 @@ public class WeaponsManager : MonoBehaviour
         
     }
 
-    void GunEnable()
+    public void GunEnable()
     {
         if (shopScript.playerBoughtGun)
         {
@@ -39,6 +41,8 @@ public class WeaponsManager : MonoBehaviour
             moneyScript.bankAccount -= 50;
             gun.SetActive(true);
             sword.SetActive(false);
+            gunPriceText.SetActive(false);
+
         }
         else
         {
@@ -46,7 +50,7 @@ public class WeaponsManager : MonoBehaviour
         }
     }
 
-    void SwordEnable()
+    public void SwordEnable()
     {
         if (shopScript.playerBoughtSword)
         {
@@ -62,6 +66,7 @@ public class WeaponsManager : MonoBehaviour
             moneyScript.bankAccount -= 20;
             sword.SetActive(true);
             gun.SetActive(false);
+            swordPriceText.SetActive(false);
         }
         else
         {
