@@ -19,7 +19,10 @@ public class FPSController : MonoBehaviour
 {
 
     [SerializeField] private AudioClip playerJumpSound;
+
     [SerializeField] private AudioClip footsteps;
+    [SerializeField] private AudioClip footstep1;
+
     [SerializeField] private GameObject shopObject;
     private ShopScript shopScript;
 

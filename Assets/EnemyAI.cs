@@ -141,6 +141,7 @@ public class EnemyAI : MonoBehaviour
         if (isDead) return;
 
         healthAmount -= damage;
+        AudioSource.PlayClipAtPoint(enemyDamage, transform.position, 1f);
         
 
         if (healthAmount <= 0f)
@@ -178,14 +179,15 @@ public class EnemyAI : MonoBehaviour
         if (player == null) return;
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if (distanceToPlayer <= attackRange + attackRangeTolerance) 
+        if (distanceToPlayer <= attackRange + attackRangeTolerance)
         {
             Interactions playerInteractions = player.GetComponent<Interactions>();
             if (playerInteractions != null)
             {
                 playerInteractions.TakeDamage(animDamage);
-                
+
             }
+            AudioSource.PlayClipAtPoint(enemyDamage, transform.position, 1f);
         }
     }
 }
