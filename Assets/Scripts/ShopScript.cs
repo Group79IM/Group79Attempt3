@@ -19,6 +19,12 @@ public class ShopScript : MonoBehaviour
     [SerializeField] private AudioClip shopSound;
     [SerializeField] private AudioClip buttonSound;
 
+    public bool playerUsingSword = false;
+    public bool playerUsingGun = false;
+    public bool playerBoughtSword = false;
+    public bool playerBoughtGun = false;
+    
+
     public bool shopOpen = false;
 
     public TMP_Text coinNumText;
@@ -55,6 +61,21 @@ public class ShopScript : MonoBehaviour
     public void Enable()
     {
         gameObject.SetActive(true);
+    }
+    public void BuySword()
+    {
+        if (moneyScript.bankAccount >= 20)
+        {
+            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
+            moneyScript.bankAccount -= 20;
+            playerBoughtSword = true;
+            playerUsingSword = true;
+            Debug.Log("Bought Sword");
+        }
+        else
+        {
+            Debug.Log("Not enough money for sword");
+        }
     }
     public void ShopManagement(InputAction.CallbackContext context)
     {
@@ -96,35 +117,52 @@ public class ShopScript : MonoBehaviour
             Debug.Log("Player left shop");
         }
     }
-    void Update()
-    {
+    void Update() {
         // Update the coin number text in the shop
         coinNumText.text = moneyScript.bankAccount.ToString();
 
-        if (moneyScript.bankAccount >= 20)
-        {
+        if (playerBoughtSword) {
             swordOneShopButton.interactable = true;
         }
-        else
-        {
+        else if (!playerBoughtSword && (moneyScript.bankAccount >= 20)) {
+            swordOneShopButton.interactable = true;
+        }
+        else {
             swordOneShopButton.interactable = false;
         }
 
-        if (moneyScript.bankAccount >= 50)
-        {
+        if (playerBoughtGun) {
             gunOneShopButton.interactable = true;
         }
-        else
-        {
+        else if (!playerBoughtGun && (moneyScript.bankAccount >= 50)) {
+            gunOneShopButton.interactable = true;
+        }
+        else {
             gunOneShopButton.interactable = false;
         }
 
-        if (moneyScript.bankAccount >= 10)
-        {
+        // if ((moneyScript.bankAccount < 20) && !playerBoughtSword)
+        // {
+        //     swordOneShopButton.interactable = false
+        // }
+        // else
+        // {
+        //     swordOneShopButton.interactable = true;
+        // }
+
+        // if ((moneyScript.bankAccount < 50) && !playerBoughtGun)
+        // {
+        //     gunOneShopButton.interactable = false;
+        // }
+        // else
+        // {
+        //     gunOneShopButton.interactable = true;
+        // }
+
+        if (moneyScript.bankAccount >= 10) {
             healthPackShopButton.interactable = true;
         }
-        else
-        {
+        else {
             healthPackShopButton.interactable = false;
         }
 
