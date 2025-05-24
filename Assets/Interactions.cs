@@ -37,13 +37,6 @@ public class Interactions : MonoBehaviour
         }
     }
 
-    public void AddHealth(int plusHealth)
-    {
-        healthAmount += plusHealth;
-        healthAmount = Mathf.Clamp(healthAmount, 0f, 100f);
-        healthBar.fillAmount = healthAmount / 100;
-    }
-
     void Die()
     {
         Debug.Log("Player died.");
