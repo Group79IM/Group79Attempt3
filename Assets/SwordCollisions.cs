@@ -25,6 +25,8 @@ public class SwordCollisions : MonoBehaviour
                 enemyAnimator.SetTrigger("hit");
 
             if (enemy != null)
+                        //hit sound
+
                 enemy.TakeDamage(swordDamage);
 
             hasHit = true; 
