@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinsScript : MonoBehaviour {
     [SerializeField] private GameObject moneyObject;
+    [SerializeField] private AudioClip coinPickUP;
     private Money moneyScript;
 
     void Awake()
@@ -15,14 +16,16 @@ public class CoinsScript : MonoBehaviour {
         if (collision.gameObject.CompareTag("Money") || collision.gameObject.CompareTag("BossMoney"))
         {
             Debug.Log("Player collided with coin");
-            moneyScript.AddMoney(1);
+            moneyScript.AddMoney(3);
             Destroy(collision.gameObject);
+            AudioSource.PlayClipAtPoint(coinPickUP, transform.position, 1f);
         }
         if (collision.gameObject.CompareTag("BossMoney"))
         {
             Debug.Log("Player collided with lots of coins");
-            moneyScript.AddMoney(10);
+            moneyScript.AddMoney(15);
             Destroy(collision.gameObject);
+            AudioSource.PlayClipAtPoint(coinPickUP, transform.position, 1f);
         }
     }
 }
