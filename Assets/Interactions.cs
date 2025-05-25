@@ -46,6 +46,18 @@ public class Interactions : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Player died.");
+        
+        StartCoroutine(DeathSequence());
     }
 }
+
+
+IEnumerator DeathSequence()
+    {
+        //play gong sound
+         yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(4); // death screen
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0); // back to main menu screen
+         
+    }
