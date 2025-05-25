@@ -83,11 +83,14 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
+        
             agent.isStopped = false;
             Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
             Vector3 targetPosition = player.transform.position - directionToPlayer * stopOffset;
             agent.SetDestination(targetPosition);
-            animator.SetBool("walk", true);
+                    animator.SetBool("walk", true);
+        
+            
         }
     }
 
@@ -171,6 +174,7 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(1.75f);
         transform.Find("coins").gameObject.SetActive(true);
+        Destroy(gameObject, 12.5f);
     }
 
 
