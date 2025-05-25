@@ -273,8 +273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthAmount: 100
   healthBar: {fileID: 0}
-  playerDamage: {fileID: 0}
-  gong: {fileID: 0}
+  playerDamage: {fileID: 8300000, guid: ef79713956c046149809ed2a5798d316, type: 3}
+  gong: {fileID: 8300000, guid: 883ec17519dd74a46b3ff74906093a9a, type: 3}
 --- !u!143 &1985013641076492235
 CharacterController:
   m_ObjectHideFlags: 0
@@ -313,8 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80ecb3b56dcb4b298e38dc8c7cfe14f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerJumpSound: {fileID: 0}
-  footsteps: {fileID: 0}
+  playerJumpSound: {fileID: 8300000, guid: 0809207531f357d45b4c1e865f032da1, type: 3}
+  footsteps: {fileID: 8300000, guid: 7604682de2236c749834f978870f6e68, type: 3}
   shopObject: {fileID: 0}
   playerCamera: {fileID: 6547357611543772490}
   walkSpeed: 2
