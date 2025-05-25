@@ -1966,8 +1966,8 @@ MonoBehaviour:
   gun: {fileID: 0}
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
   shopObject: {fileID: 0}
-  swordPriceText: {fileID: 0}
-  gunPriceText: {fileID: 0}
+  swordPriceText: {fileID: 1861415829778599790}
+  gunPriceText: {fileID: 8231490952143538509}
 --- !u!1 &6525638868777604855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,20 +2477,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 1419145324869666320}
-  moneyObject: {fileID: 0}
+  moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
   swordOneShopButton: {fileID: 408450174394018791}
   gunOneShopButton: {fileID: 149900784644161652}
   healthPackShopButton: {fileID: 8057621385258438819}
   TBCShopButton: {fileID: 1980846160709822117}
   playerInShop: 0
-  shopSound: {fileID: 0}
-  buttonSound: {fileID: 0}
+  shopSound: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
+  buttonSound: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
   playerUsingSword: 0
   playerUsingGun: 0
   playerBoughtSword: 0
   playerBoughtGun: 0
   shopOpen: 0
-  coinNumText: {fileID: 4617968404288030775}
+  coinNumText: {fileID: 0}
+  coinNumTextShop: {fileID: 0}
 --- !u!114 &4864989957835191557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2504,7 +2505,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 3484444941828594628}
-  buttonClick: {fileID: 0}
+  buttonClick: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
+  portalSound: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
   menuOpen: 0
 --- !u!1 &8231490952143538509
 GameObject:

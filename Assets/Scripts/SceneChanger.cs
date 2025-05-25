@@ -8,13 +8,17 @@ public class SceneChanger : MonoBehaviour
 {
     [SerializeField] private Group79Game input;
     [SerializeField] private GameObject gameObject;
+    [SerializeField] private GameObject moneyObject;
     [SerializeField] private AudioClip buttonClick;
     [SerializeField] private AudioClip portalSound;
+
     public bool menuOpen = false;
+    private Money moneyScript;
     private void Awake()
     {
         input = new Group79Game();
         input.GameUI.Exit.performed += PauseMenuManagement;
+
     }
     void OnEnable()
     {
@@ -29,6 +33,7 @@ public class SceneChanger : MonoBehaviour
     public void MainMenu()
     {
         AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+        moneyScript.bankAccount = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }

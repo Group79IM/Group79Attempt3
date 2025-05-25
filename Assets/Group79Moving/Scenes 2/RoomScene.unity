@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 105697496}
   - component: {fileID: 105697499}
   - component: {fileID: 105697498}
-  - component: {fileID: 105697497}
+  - component: {fileID: 105697500}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1865,19 +1865,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1327720705}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &105697497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105697495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f07d800f99388449775e9eeb5038d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portalSound: {fileID: 0}
 --- !u!54 &105697498
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1926,6 +1913,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &105697500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105697495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2ee4973774fc24e927f8dbe8903572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalSound: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
 --- !u!1001 &108417376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3470,6 +3470,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 518672475716126176, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: gong
+      value: 
+      objectReference: {fileID: 8300000, guid: e329b042e3cc3b14ca091d8df8f930e5, type: 3}
+    - target: {fileID: 518672475716126176, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1803892035}
@@ -3557,10 +3561,6 @@ PrefabInstance:
       propertyPath: swordWhoosh
       value: 
       objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
-    - target: {fileID: 8851825857702105735, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
-      propertyPath: coinPickUP
-      value: 
-      objectReference: {fileID: 8300000, guid: 31753412444ece54a821f3e4c1e0ce22, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10072,54 +10072,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615765776}
   m_Mesh: {fileID: -5308210633308118684, guid: b1cfe3438ca381a46a5fc8bbf67e5a68, type: 3}
---- !u!1 &628414064
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 628414066}
-  - component: {fileID: 628414065}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &628414065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628414064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4ce82b1b97e38449962213ffeb4738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObject: {fileID: 0}
-  buttonClick: {fileID: 0}
-  portalSound: {fileID: 0}
-  menuOpen: 0
---- !u!4 &628414066
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628414064}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -45.388702, y: -0.63507843, z: 207.7137}
-  m_LocalScale: {x: 0.61991024, y: 0.61991, z: 0.61991024}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 977649058}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634939531
 GameObject:
   m_ObjectHideFlags: 0
@@ -13303,10 +13255,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 798373352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa2ee4973774fc24e927f8dbe8903572, type: 3}
+  m_Script: {fileID: 11500000, guid: e2f07d800f99388449775e9eeb5038d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portalSound: {fileID: 0}
+  portalSound: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
 --- !u!1001 &810793037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15742,25 +15694,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4670924838016129432, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
-      propertyPath: shopSound
+      propertyPath: coinNumText
       value: 
-      objectReference: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
-    - target: {fileID: 4670924838016129432, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
-      propertyPath: buttonSound
-      value: 
-      objectReference: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
-    - target: {fileID: 4670924838016129432, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
-      propertyPath: moneyObject
-      value: 
-      objectReference: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
+      objectReference: {fileID: 1547516426}
     - target: {fileID: 4670924838016129432, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: coinNumTextShop
       value: 
       objectReference: {fileID: 1547516426}
     - target: {fileID: 4864989957835191557, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
-      propertyPath: buttonClick
+      propertyPath: moneyObject
       value: 
-      objectReference: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
+      objectReference: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
     - target: {fileID: 4864989957835191557, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: FPSControllerObject
       value: 
@@ -15769,7 +15713,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuCanvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4670924838016129432, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17937,7 +17882,6 @@ Transform:
   - {fileID: 1863288255}
   - {fileID: 313814918}
   - {fileID: 1182894572}
-  - {fileID: 628414066}
   - {fileID: 937682180}
   - {fileID: 1327720705}
   m_Father: {fileID: 0}

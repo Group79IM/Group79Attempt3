@@ -51,12 +51,11 @@ public class ShopScript : MonoBehaviour
     {
         Time.timeScale = 0f;
         Enable();
-        AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
         Debug.Log("open shop");
+        AudioSource.PlayClipAtPoint(shopSound, transform.position, 1f);
     }
     public void CloseShop()
     {
-        
         Time.timeScale = 1f;
         Disable();
         Debug.Log("close shop");
@@ -156,24 +155,6 @@ public class ShopScript : MonoBehaviour
         {
             gunOneShopButton.interactable = false;
         }
-
-        // if ((moneyScript.bankAccount < 20) && !playerBoughtSword)
-        // {
-        //     swordOneShopButton.interactable = false
-        // }
-        // else
-        // {
-        //     swordOneShopButton.interactable = true;
-        // }
-
-        // if ((moneyScript.bankAccount < 50) && !playerBoughtGun)
-        // {
-        //     gunOneShopButton.interactable = false;
-        // }
-        // else
-        // {
-        //     gunOneShopButton.interactable = true;
-        // }
 
         if (moneyScript.bankAccount >= 10) {
             healthPackShopButton.interactable = true;

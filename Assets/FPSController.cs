@@ -106,16 +106,7 @@ public class FPSController : MonoBehaviour
             Cursor.visible = true;
             Time.timeScale = 0f;
         }
-        else
-        {
-            canMove = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            Time.timeScale = 1f;
-
-        }
-
-        if (sceneChangerScript.menuOpen)
+        else if (sceneChangerScript.menuOpen)
         {
             canMove = false;
             Cursor.lockState = CursorLockMode.None;
@@ -128,7 +119,6 @@ public class FPSController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1f;
-
         }
     }
     
