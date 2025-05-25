@@ -64,10 +64,12 @@ public class SceneChanger : MonoBehaviour
     public void Disable()
     {
         gameObject.SetActive(false);
+        menuOpen = false;
     }
     public void Enable()
     {
         gameObject.SetActive(true);
+        menuOpen = true;
     }
     public void EgyptScene()
     {
@@ -76,6 +78,10 @@ public class SceneChanger : MonoBehaviour
     public void FuturisticScene()
     {
         SceneManager.LoadScene(2);
+    }
+    public void PlayButton()
+    {
+        
     }
     public void PauseMenuManagement(InputAction.CallbackContext context)
     {
