@@ -6,8 +6,8 @@ public class SimpleLaserController : MonoBehaviour
     [Tooltip("Assign the Laser Cylinder gameobject (child of Gun) here")]
     public GameObject laserCylinder;
 
-    public float burstDuration = 0.3f;   
-    public float cooldown = 0.5f;       
+    public float burstDuration = 0.025f;   
+    public float cooldown = 0.05f;       
     public float damageAmount = 10f;    
 
     private bool canShoot = true;
@@ -27,13 +27,15 @@ public class SimpleLaserController : MonoBehaviour
         if (Input.GetMouseButton(0) && canShoot)
         {
             StartCoroutine(FireBurst());
-            AudioSource.PlayClipAtPoint(laserSound, transform.position, 1f);
+            
         }
     }
 
     IEnumerator FireBurst()
     {
+       
         canShoot = false;
+        AudioSource.PlayClipAtPoint(laserSound, transform.position, 0.5f);
         laserCylinder.SetActive(true);
 
         yield return new WaitForSeconds(burstDuration);
