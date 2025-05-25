@@ -28,6 +28,7 @@ public class ShopScript : MonoBehaviour
     public bool shopOpen = false;
 
     public TMP_Text coinNumText;
+    public TMP_Text coinNumTextShop;
     private Money moneyScript;
 
     void Awake()
@@ -124,8 +125,9 @@ public class ShopScript : MonoBehaviour
         }
     }
     void Update() {
-        // Update the coin number text in the shop
+        // Update the coin number text in the shop and on screen
         coinNumText.text = moneyScript.bankAccount.ToString();
+        coinNumTextShop.text = moneyScript.bankAccount.ToString();
 
         if (playerBoughtSword)
         {

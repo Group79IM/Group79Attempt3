@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 518672475716126176}
   - component: {fileID: 1985013641076492235}
   - component: {fileID: 2631699230834186228}
+  - component: {fileID: 8851825857702105735}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -316,6 +317,7 @@ MonoBehaviour:
   playerJumpSound: {fileID: 8300000, guid: 0809207531f357d45b4c1e865f032da1, type: 3}
   footsteps: {fileID: 8300000, guid: 7604682de2236c749834f978870f6e68, type: 3}
   shopObject: {fileID: 0}
+  sceneChangerObject: {fileID: 0}
   playerCamera: {fileID: 6547357611543772490}
   walkSpeed: 2
   runSpeed: 5
@@ -324,6 +326,19 @@ MonoBehaviour:
   lookSpeed: 2
   lookXLimit: 45
   canMove: 1
+--- !u!114 &8851825857702105735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164914754415736743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bda03cbb30175c40b2728cd26869e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
 --- !u!1 &3100602523577094693
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,10 +12,16 @@ public class CoinsScript : MonoBehaviour {
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Money"))
+        if (collision.gameObject.CompareTag("Money") || collision.gameObject.CompareTag("BossMoney"))
         {
             Debug.Log("Player collided with coin");
             moneyScript.AddMoney(1);
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("BossMoney"))
+        {
+            Debug.Log("Player collided with lots of coins");
+            moneyScript.AddMoney(10);
             Destroy(collision.gameObject);
         }
     }
