@@ -10421,8 +10421,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1289144106}
-  doorOpen: {fileID: 0}
-  doorClose: {fileID: 0}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!65 &670734038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24984,8 +24984,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  doorOpen: {fileID: 0}
-  doorClose: {fileID: 0}
+  doorOpen: {fileID: 8300000, guid: 32d76f767023f3e4e9fe42348c4d7b51, type: 3}
+  doorClose: {fileID: 8300000, guid: f1795fdf7a011994db4ea64b799395d0, type: 3}
 --- !u!65 &1430686162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27187,7 +27187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf5ae51256723a44b3d3a46ec2d31e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.7
+      value: 16.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf5ae51256723a44b3d3a46ec2d31e3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27195,7 +27195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf5ae51256723a44b3d3a46ec2d31e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 70.71
+      value: 72.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9cf5ae51256723a44b3d3a46ec2d31e3, type: 3}
       propertyPath: m_LocalRotation.w
