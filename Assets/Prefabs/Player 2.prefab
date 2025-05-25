@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 1985013641076492235}
   - component: {fileID: 2631699230834186228}
   - component: {fileID: 8851825857702105735}
+  - component: {fileID: 974257397913299225}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -339,6 +340,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
+  coinPickUP: {fileID: 8300000, guid: 31753412444ece54a821f3e4c1e0ce22, type: 3}
+--- !u!54 &974257397913299225
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164914754415736743}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &3100602523577094693
 GameObject:
   m_ObjectHideFlags: 0
