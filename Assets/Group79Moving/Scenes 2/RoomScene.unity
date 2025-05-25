@@ -7222,7 +7222,7 @@ PrefabInstance:
     - target: {fileID: 4730997475087956119, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1803892035}
     - target: {fileID: 5086278208472105827, guid: 1e856b7b390b9c4489e307bbffe84f23, type: 3}
       propertyPath: m_Name
       value: Player 1
