@@ -21,7 +21,10 @@ public class FPSController : MonoBehaviour
     [SerializeField] private AudioClip playerJumpSound;
     [SerializeField] private AudioClip footsteps;
     [SerializeField] private GameObject shopObject;
+    [SerializeField] private GameObject sceneChangerObject;
+    
     private ShopScript shopScript;
+    private SceneChanger sceneChangerScript;
 
     // made the unity camera a cinemachine virtual camera to work with the other VCs
     public Camera playerCamera;
@@ -50,6 +53,7 @@ public class FPSController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         shopScript = shopObject.GetComponent<ShopScript>();
+        sceneChangerScript = sceneChangerObject.GetComponent<SceneChanger>();
     }
 
     void Update()
@@ -96,6 +100,22 @@ public class FPSController : MonoBehaviour
         // end of code following 'All Things Game Dev'
 
         if (shopScript.shopOpen)
+        {
+            canMove = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            canMove = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1f;
+
+        }
+
+        if (sceneChangerScript.menuOpen)
         {
             canMove = false;
             Cursor.lockState = CursorLockMode.None;

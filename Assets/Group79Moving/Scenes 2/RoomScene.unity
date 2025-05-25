@@ -3477,6 +3477,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2631699230834186228, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: shopObject
+      value: 
+      objectReference: {fileID: 1964212485}
+    - target: {fileID: 2631699230834186228, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 1636991742}
+    - target: {fileID: 2631699230834186228, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: sceneChangerObject
+      value: 
+      objectReference: {fileID: 1636991742}
     - target: {fileID: 6190611604114447770, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 206.0021
@@ -15732,6 +15744,10 @@ PrefabInstance:
       propertyPath: buttonClick
       value: 
       objectReference: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
+    - target: {fileID: 4864989957835191557, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: FPSControllerObject
+      value: 
+      objectReference: {fileID: 913735295}
     - target: {fileID: 7941953128040815889, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
@@ -15943,6 +15959,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2066356268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &913735295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+  m_PrefabInstance: {fileID: 182264926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &913919540
 GameObject:
   m_ObjectHideFlags: 0
@@ -28118,6 +28139,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c1413c63b2bb541a25a4efda3060c7, type: 3}
+--- !u!1 &1636991742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7941953128040815889, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+  m_PrefabInstance: {fileID: 895835662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1639019304
 GameObject:
   m_ObjectHideFlags: 0
@@ -33817,6 +33843,7 @@ MonoBehaviour:
   playerJumpSound: {fileID: 8300000, guid: 0809207531f357d45b4c1e865f032da1, type: 3}
   footsteps: {fileID: 8300000, guid: 7604682de2236c749834f978870f6e68, type: 3}
   shopObject: {fileID: 0}
+  sceneChangerObject: {fileID: 0}
   playerCamera: {fileID: 1336651563}
   walkSpeed: 2
   runSpeed: 5
