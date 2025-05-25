@@ -9,6 +9,7 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] private Group79Game input;
     [SerializeField] private GameObject gameObject;
     [SerializeField] private AudioClip buttonClick;
+    [SerializeField] private AudioClip portalSound;
     public bool menuOpen = false;
     private void Awake()
     {
@@ -74,10 +75,12 @@ public class SceneChanger : MonoBehaviour
     public void EgyptScene()
     {
         SceneManager.LoadScene(1);
+        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
     }
     public void FuturisticScene()
     {
         SceneManager.LoadScene(2);
+        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
     }
     public void PlayButton()
     {
