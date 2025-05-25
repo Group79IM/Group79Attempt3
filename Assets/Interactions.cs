@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 
@@ -10,20 +11,14 @@ public class Interactions : MonoBehaviour
     [SerializeField] private AudioClip playerDamage;
     [SerializeField] private AudioClip gong;
 
-    void Update()
-    {
-        if (healthAmount <= 0)
-        {
-            AudioSource.PlayClipAtPoint(gong, transform.position, 1f);
-            //wait so sound can play
-            ReloadScene();
-        }
-    }
+    // void Update()
+    // {
+    //     if (healthAmount <= 0)
+    //     {
+    //         Die();
+    //     }
+    // }
 
-    void ReloadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
     public void TakeDamage(float damage)
     {
@@ -32,9 +27,11 @@ public class Interactions : MonoBehaviour
         healthAmount = Mathf.Clamp(healthAmount, 0f, 100f);
         healthBar.fillAmount = healthAmount / 100;
         if (healthAmount <= 0)
-        {          
+        {
             Die();
+            Debug.Log("player died");
         }
+      
     }
 
     public void AddHealth(int plusHealth)
@@ -44,8 +41,22 @@ public class Interactions : MonoBehaviour
         healthBar.fillAmount = healthAmount / 100;
     }
 
+    IEnumerator DeathSequence()
+    {
+        AudioSource.PlayClipAtPoint(gong, transform.position, 1f);
+        Debug.Log("dying sound");
+        yield return new WaitForSeconds(gong.length);
+        SceneManager.LoadScene(4); // death screen
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(0); // back to main menu screen
+        
+    }
     void Die()
     {
-        Debug.Log("Player died.");
+        StartCoroutine(DeathSequence());
+        Debug.Log("starting coroutine");
     }
 }
+
+
+

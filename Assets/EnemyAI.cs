@@ -141,6 +141,7 @@ public class EnemyAI : MonoBehaviour
         if (isDead) return;
 
         healthAmount -= damage;
+        AudioSource.PlayClipAtPoint(enemyDamage, transform.position, 1f);
         
 
         if (healthAmount <= 0f)
