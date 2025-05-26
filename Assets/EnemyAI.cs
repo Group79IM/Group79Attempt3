@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     private float lastAttackTime = -999f;
     public float attackRangeTolerance = 0.5f;
 
-    public bool isDead = false;
+    private bool isDead = false;
     private bool playerDetected = false;
     [SerializeField] private AudioClip enemyDamage;
     [SerializeField] private AudioClip coinDrop;

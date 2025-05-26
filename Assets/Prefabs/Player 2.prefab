@@ -406,9 +406,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   playerDamage: {fileID: 8300000, guid: ef79713956c046149809ed2a5798d316, type: 3}
   gong: {fileID: 8300000, guid: 883ec17519dd74a46b3ff74906093a9a, type: 3}
-  redScreen: {fileID: 0}
-  fadeSpeed: 1
-  fadePause: 0
 --- !u!143 &1985013641076492235
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2196,7 +2193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d50bf9885526431d9213326bacc3efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordDamage: 100
+  swordDamage: 20
   wc: {fileID: 2735207630027019863}
 --- !u!95 &2214933461490415418
 Animator:
