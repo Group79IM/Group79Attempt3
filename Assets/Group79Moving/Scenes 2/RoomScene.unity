@@ -3561,6 +3561,10 @@ PrefabInstance:
       propertyPath: swordWhoosh
       value: 
       objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
+    - target: {fileID: 8851825857702105735, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: coinPickUP
+      value: 
+      objectReference: {fileID: 8300000, guid: 277cb4bf3c5d2e040a9affddfcdd3841, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
