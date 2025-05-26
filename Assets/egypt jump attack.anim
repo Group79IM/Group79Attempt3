@@ -75639,6 +75639,6 @@ AnimationClip:
     functionName: DealDamage
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 45
+    floatParameter: 32.5
     intParameter: 0
     messageOptions: 0

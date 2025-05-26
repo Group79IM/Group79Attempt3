@@ -887,8 +887,8 @@ MonoBehaviour:
   stopOffset: 1.5
   attackDamage: 10
   attackRangeTolerance: 0.5
-  enemyDamage: {fileID: 0}
-  coinDrop: {fileID: 0}
+  enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
+  coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!195 &147774565
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -935,8 +935,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.5986023, z: 1}
-  m_Center: {x: 0, y: 0.815567, z: 0}
+  m_Size: {x: 1.4943085, y: 2.1949081, z: 1}
+  m_Center: {x: -0.24715424, y: 1.1137199, z: 0}
 --- !u!54 &147774569
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1245,7 +1245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae7e07f4d9573d449915ebebcbf55750, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 208.1
+      value: 210.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae7e07f4d9573d449915ebebcbf55750, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1253,7 +1253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae7e07f4d9573d449915ebebcbf55750, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 292.3
+      value: 308.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae7e07f4d9573d449915ebebcbf55750, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc8737a1ffb444b5a06eafe87381ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmount: 100
+  healthAmount: 400
   animator: {fileID: 0}
   patrolRadius: 5
   detectionRadius: 7
@@ -1612,8 +1612,8 @@ MonoBehaviour:
   stopOffset: 0.4
   attackDamage: 10
   attackRangeTolerance: 1
-  enemyDamage: {fileID: 0}
-  coinDrop: {fileID: 0}
+  enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
+  coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!54 &177415098
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1687,8 +1687,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 36.733093, y: 43.635223, z: 43.0719}
-  m_Center: {x: 1.8785095, y: 21.317612, z: 8.017273}
+  m_Size: {x: 41.194153, y: 48.32425, z: 43.0719}
+  m_Center: {x: -0.35202026, y: 23.662125, z: 8.017273}
 --- !u!1 &189567962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,7 +2657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 198.3
+      value: 216.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2665,7 +2665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 282.7
+      value: 284.77
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 885e396bd0a011348adab66107fe0eb0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3883,6 +3883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
+  coinPickUP: {fileID: 0}
 --- !u!1 &539492061
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,6 +5933,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829613432}
   m_Mesh: {fileID: -5731547941117289742, guid: b1cfe3438ca381a46a5fc8bbf67e5a68, type: 3}
+--- !u!1 &843480842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843480843}
+  - component: {fileID: 843480845}
+  - component: {fileID: 843480844}
+  m_Layer: 5
+  m_Name: DamageOverlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &843480843
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843480842}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -5.527831, y: 0.6260863, z: 1.7604}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 945945532}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0010262, y: -0.0007401}
+  m_SizeDelta: {x: 347.33, y: 1725}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &843480844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843480842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8679245, g: 0.26610893, b: 0.26610893, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &843480845
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843480842}
+  m_CullTransparentMesh: 1
 --- !u!1 &844824724
 GameObject:
   m_ObjectHideFlags: 0
@@ -7031,6 +7107,7 @@ RectTransform:
   m_Children:
   - {fileID: 2141132654}
   - {fileID: 475679352}
+  - {fileID: 843480843}
   - {fileID: 1230065198}
   - {fileID: 1457203024}
   m_Father: {fileID: 503405388}
@@ -8880,7 +8957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c92866864d297145bb9dfa006b9890d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 210.2
+      value: 210.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c92866864d297145bb9dfa006b9890d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8888,7 +8965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c92866864d297145bb9dfa006b9890d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 314
+      value: 285.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c92866864d297145bb9dfa006b9890d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9265,17 +9342,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc8737a1ffb444b5a06eafe87381ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmount: 100
+  healthAmount: 500
   animator: {fileID: 1231316875}
   patrolRadius: 5
   detectionRadius: 7
   attackRange: 4
-  attackCooldown: 3.5
+  attackCooldown: 2.75
   stopOffset: 2
   attackDamage: 10
   attackRangeTolerance: 0.35
-  enemyDamage: {fileID: 0}
-  coinDrop: {fileID: 0}
+  enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
+  coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!65 &1231316881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9295,8 +9372,8 @@ BoxCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 33.07977, y: 37.07077, z: 33.228065}
-  m_Center: {x: -1.6509894, y: 18.592453, z: 6.8203473}
+  m_Size: {x: 33.07977, y: 39.52179, z: 33.228065}
+  m_Center: {x: -1.65099, y: 19.817963, z: 6.8203473}
 --- !u!4 &1231316882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2c92866864d297145bb9dfa006b9890d, type: 3}
@@ -9312,7 +9389,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.5
-  m_Speed: 2.25
+  m_Speed: 2.75
   m_Acceleration: 8
   avoidancePriority: 99
   m_AngularSpeed: 120
@@ -17197,10 +17274,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 64997368181795329, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 518672475716126176, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 475679353}
+    - target: {fileID: 518672475716126176, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: redScreen
+      value: 
+      objectReference: {fileID: 843480844}
+    - target: {fileID: 533908192917686161, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -17213,6 +17302,14 @@ PrefabInstance:
       propertyPath: laser
       value: 
       objectReference: {fileID: 1472486091}
+    - target: {fileID: 2735207630027019863, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordWhoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
+    - target: {fileID: 5205130744178674592, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordDamage
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5250776220494114786, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: gun
       value: 
@@ -17221,6 +17318,26 @@ PrefabInstance:
       propertyPath: laser
       value: 
       objectReference: {fileID: 1472486091}
+    - target: {fileID: 5250776220494114786, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordWhoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: laserSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: damageAmount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: burstDuration
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 6190611604114447770, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 211.07
@@ -17261,6 +17378,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6783342681399916351, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427036940775935462, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordDamage
+      value: 37.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472465084903388019, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8110748022981100479, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: gun
       value: 
@@ -17269,6 +17398,10 @@ PrefabInstance:
       propertyPath: laser
       value: 
       objectReference: {fileID: 1472486091}
+    - target: {fileID: 8110748022981100479, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordWhoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17284,6 +17417,6 @@ SceneRoots:
   - {fileID: 539492063}
   - {fileID: 5315573859895742930}
   - {fileID: 177415092}
-  - {fileID: 1231316873}
   - {fileID: 348650762}
+  - {fileID: 1231316873}
   - {fileID: 503405388}
