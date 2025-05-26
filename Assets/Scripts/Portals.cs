@@ -18,6 +18,10 @@ public class Portals : MonoBehaviour
         AudioSource.PlayClipAtPoint(portalSound, transform.position, 1f);
         Debug.Log("portal sound");
         yield return new WaitForSeconds(portalSound.length);
+        currentSceneNum++;
+        SceneManager.LoadScene(currentSceneNum);
+        Debug.Log("Current Scene Number: " + currentSceneNum);
+            
 
     }
     
@@ -29,10 +33,10 @@ public class Portals : MonoBehaviour
         {
             Debug.Log("Portal Collided with Player!");
             StartCoroutine(PortalSequence());
-            currentSceneNum++;
-            SceneManager.LoadScene(currentSceneNum);
-            Debug.Log("Current Scene Number: " + currentSceneNum);
-            AudioSource.PlayClipAtPoint(portalSound, transform.position, 1f);
+            // currentSceneNum++;
+            // SceneManager.LoadScene(currentSceneNum);
+            // Debug.Log("Current Scene Number: " + currentSceneNum);
+            
         }
     }
 }
