@@ -27680,11 +27680,11 @@ PrefabInstance:
     - target: {fileID: 572601614691298040, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
       propertyPath: gun
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1551953171}
     - target: {fileID: 572601614691298040, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
       propertyPath: sword
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1784852872}
     - target: {fileID: 572601614691298040, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
       propertyPath: gunPriceText
       value: 
@@ -29461,6 +29461,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2631699230834186228, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: shopObject
+      value: 
+      objectReference: {fileID: 1964212485}
+    - target: {fileID: 2631699230834186228, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: sceneChangerObject
+      value: 
+      objectReference: {fileID: 1530162532}
     - target: {fileID: 2735207630027019863, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: swordWhoosh
       value: 

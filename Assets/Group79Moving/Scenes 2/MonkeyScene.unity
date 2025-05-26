@@ -15238,6 +15238,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2631699230834186228, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: shopObject
+      value: 
+      objectReference: {fileID: 757523991}
+    - target: {fileID: 2631699230834186228, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: sceneChangerObject
+      value: 
+      objectReference: {fileID: 1316415783}
     - target: {fileID: 2735207630027019863, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: swordWhoosh
       value: 
@@ -56556,6 +56564,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2695063834042760737, guid: e1d90b23beea5904a96a2820153a57f3, type: 3}
   m_PrefabInstance: {fileID: 1768064542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1316415783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7941953128040815889, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+  m_PrefabInstance: {fileID: 1869756333}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1316447100
 PrefabInstance:
