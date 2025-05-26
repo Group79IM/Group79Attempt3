@@ -24002,14 +24002,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4802847425858459494, guid: 67a9dc6da0c794f8795760814e37a70e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802847425858459494, guid: 67a9dc6da0c794f8795760814e37a70e, type: 3}
-      propertyPath: m_TagString
-      value: BossMoney
-      objectReference: {fileID: 0}
     - target: {fileID: 4897865641669597078, guid: 67a9dc6da0c794f8795760814e37a70e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 209.49
@@ -24069,7 +24061,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 862662716}
     - targetCorrespondingSourceObject: {fileID: 4802847425858459494, guid: 67a9dc6da0c794f8795760814e37a70e, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 917863309}
   m_SourcePrefab: {fileID: 100100000, guid: 67a9dc6da0c794f8795760814e37a70e, type: 3}
 --- !u!4 &1448206024 stripped
@@ -27361,10 +27353,6 @@ PrefabInstance:
     - target: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_Name
       value: Player 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2735207630027019863, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: swordWhoosh

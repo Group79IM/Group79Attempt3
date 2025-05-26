@@ -675,8 +675,6 @@ GameObject:
   - component: {fileID: 7282727828747367123}
   - component: {fileID: 4575165434472204920}
   - component: {fileID: 13966436286887065}
-  - component: {fileID: 6897672551090685378}
-  - component: {fileID: 7899358870612636072}
   m_Layer: 0
   m_Name: coins
   m_TagString: Untagged
@@ -792,54 +790,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &6897672551090685378
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339887364168197761}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &7899358870612636072
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339887364168197761}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.14780839, y: 0.109942436, z: 0.3}
-  m_Center: {x: 0.0048656994, y: 0.020074116, z: -0.000003830118}
 --- !u!1 &1485770698782393141
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,7 +4223,6 @@ MonoBehaviour:
   stopOffset: 1.75
   attackDamage: 10
   attackRangeTolerance: 0.35
-  isDead: 0
   enemyDamage: {fileID: 8300000, guid: cfc2b58604b5c0c4590bc6f55e6ba565, type: 3}
   coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!65 &5952005963272492622
