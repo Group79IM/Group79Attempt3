@@ -2422,7 +2422,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &4248948056179828862
 MonoBehaviour:
@@ -2505,6 +2505,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 3484444941828594628}
+  moneyObject: {fileID: 0}
+  tutorialObject: {fileID: 0}
+  buttonContainer: {fileID: 0}
+  menuBacking: {fileID: 0}
   buttonClick: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
   portalSound: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
   menuOpen: 0

@@ -101,6 +101,7 @@ public class FPSController : MonoBehaviour
 
         if (shopScript.shopOpen)
         {
+            Debug.Log("Shop is open, pausing movement.");
             canMove = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -108,6 +109,7 @@ public class FPSController : MonoBehaviour
         }
         else if (sceneChangerScript.menuOpen)
         {
+            Debug.Log("Menu is open, pausing movement.");
             canMove = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -115,6 +117,7 @@ public class FPSController : MonoBehaviour
         }
         else
         {
+            Debug.Log("Shop and Menu are closed, resuming movement.");
             canMove = true;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
