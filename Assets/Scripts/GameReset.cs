@@ -10,6 +10,11 @@ public class GameReset : MonoBehaviour
     void Awake()
     {
         moneyScript = moneyObject.GetComponent<Money>();
+        GameReseting();
+    }
+
+    void GameReseting()
+    {
         moneyScript.bankAccount = 0;
     }
 }
