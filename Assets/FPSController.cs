@@ -73,7 +73,7 @@ public class FPSController : MonoBehaviour
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
-            AudioSource.PlayClipAtPoint(playerJumpSound, transform.position, 1f);
+            AudioSource.PlayClipAtPoint(playerJumpSound, transform.position, 0.5f);
         }
         else
         {

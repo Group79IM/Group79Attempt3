@@ -22,6 +22,8 @@ public class WaveManager : MonoBehaviour
     private List<GameObject> currentEnemies = new List<GameObject>();
 
     private bool firstWaveFenceDisabled = false;
+    [SerializeField] private AudioClip buttonClick;
+    [SerializeField] private AudioClip futureBossMusic;
 
     void Start()
     {
@@ -37,6 +39,8 @@ public class WaveManager : MonoBehaviour
             {
                 fence.GetComponent<Animator>().SetTrigger("open");
                 firstWaveFenceDisabled = true;
+                AudioSource.PlayClipAtPoint(futureBossMusic, transform.position, 1f);
+                Debug.Log("future boss music playing");
                 wave++;
             }
         }
@@ -90,6 +94,7 @@ public class WaveManager : MonoBehaviour
         wave++;
         SpawnWave();
         waveText3D.text = "New wave started!";
+        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
         StartCoroutine(Wait(1.5f));
     }
 

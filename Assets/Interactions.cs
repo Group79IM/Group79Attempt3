@@ -28,7 +28,7 @@ public class Interactions : MonoBehaviour
     {
         healthAmount -= damage;
         StartCoroutine(RedDamageScreen());
-        AudioSource.PlayClipAtPoint(playerDamage, transform.position, 1f);
+        AudioSource.PlayClipAtPoint(playerDamage, transform.position, 0.5f);
         healthAmount = Mathf.Clamp(healthAmount, 0f, 100f);
         healthBar.fillAmount = healthAmount / 100;
         if (healthAmount <= 0)
