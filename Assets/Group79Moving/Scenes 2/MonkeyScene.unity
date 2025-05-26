@@ -15078,6 +15078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6190611604114447770, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 194.84
@@ -74607,6 +74611,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1339887364168197761, guid: 114a8a299ea6f4a70bea85426e242057, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339887364168197761, guid: 114a8a299ea6f4a70bea85426e242057, type: 3}
+      propertyPath: m_TagString
+      value: BossMoney
+      objectReference: {fileID: 0}
     - target: {fileID: 7248498538345574326, guid: 114a8a299ea6f4a70bea85426e242057, type: 3}
       propertyPath: m_LocalPosition.x
       value: 169.14207
