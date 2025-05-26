@@ -20644,6 +20644,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 518672475716126176, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: gong
+      value: 
+      objectReference: {fileID: 8300000, guid: e329b042e3cc3b14ca091d8df8f930e5, type: 3}
+    - target: {fileID: 518672475716126176, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 365199967}
@@ -20703,6 +20707,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8851825857702105735, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: coinPickUP
+      value: 
+      objectReference: {fileID: 8300000, guid: 277cb4bf3c5d2e040a9affddfcdd3841, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
