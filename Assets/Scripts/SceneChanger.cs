@@ -9,6 +9,9 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] private Group79Game input;
     [SerializeField] private GameObject gameObject;
     [SerializeField] private GameObject moneyObject;
+    [SerializeField] private GameObject tutorialObject;
+    [SerializeField] private GameObject buttonContainer;
+    [SerializeField] private GameObject menuBacking;
     [SerializeField] private AudioClip buttonClick;
     [SerializeField] private AudioClip portalSound;
 
@@ -90,6 +93,18 @@ public class SceneChanger : MonoBehaviour
     public void PlayButton()
     {
         
+    }
+    public void TutorialScene()
+    {
+        buttonContainer.SetActive(false);
+        menuBacking.SetActive(false);
+        tutorialObject.SetActive(true);
+    }
+    public void CloseTutorial()
+    {
+        tutorialObject.SetActive(false);
+        buttonContainer.SetActive(true);
+        menuBacking.SetActive(true);
     }
     public void PauseMenuManagement(InputAction.CallbackContext context)
     {
