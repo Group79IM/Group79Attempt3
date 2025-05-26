@@ -131,7 +131,7 @@ public class ShopScript : MonoBehaviour
         if (playerBoughtSword)
         {
             swordOneShopButton.interactable = true;
-            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
+            // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
         }
         else if (!playerBoughtSword && (moneyScript.bankAccount >= 20))
         {
@@ -145,7 +145,7 @@ public class ShopScript : MonoBehaviour
         if (playerBoughtGun)
         {
             gunOneShopButton.interactable = true;
-            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
+            // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
         }
         else if (!playerBoughtGun && (moneyScript.bankAccount >= 50))
         {
