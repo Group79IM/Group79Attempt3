@@ -13,19 +13,19 @@ public class CoinsScript : MonoBehaviour {
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Money") || collision.gameObject.CompareTag("BossMoney"))
+        if (collision.gameObject.CompareTag("Money"))
         {
             Debug.Log("Player collided with coin");
             moneyScript.AddMoney(3);
-            Destroy(collision.gameObject);
             AudioSource.PlayClipAtPoint(coinPickUP, transform.position, 1f);
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("BossMoney"))
         {
             Debug.Log("Player collided with lots of coins");
             moneyScript.AddMoney(15);
-            Destroy(collision.gameObject);
             AudioSource.PlayClipAtPoint(coinPickUP, transform.position, 1f);
+            Destroy(collision.gameObject);
         }
     }
 }
