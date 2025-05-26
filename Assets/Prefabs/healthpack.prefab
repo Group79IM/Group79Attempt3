@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plusHealth: 50
   healthpack: {fileID: 6498756632055637134}
-  healSound: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+  healSound: {fileID: 8300000, guid: ef31e856994fc6c4cbcea7ada74ee35c, type: 3}
 --- !u!65 &586799205488416248
 BoxCollider:
   m_ObjectHideFlags: 0

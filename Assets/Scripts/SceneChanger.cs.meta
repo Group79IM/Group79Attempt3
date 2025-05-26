@@ -3,7 +3,11 @@ guid: 9b4ce82b1b97e38449962213ffeb4738
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gameObject: {instanceID: 0}
+  - moneyObject: {instanceID: 0}
+  - buttonClick: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
+  - portalSound: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

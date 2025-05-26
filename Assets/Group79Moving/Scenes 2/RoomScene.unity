@@ -3568,7 +3568,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 913735296}
   m_SourcePrefab: {fileID: 100100000, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
 --- !u!1 &192237811
 GameObject:
@@ -15930,6 +15933,102 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
   m_PrefabInstance: {fileID: 182264926}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &913735296
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913735295}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 12fcadc4d5b02de4894a036fccb18d21, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 169
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &913919540
 GameObject:
   m_ObjectHideFlags: 0
@@ -25502,7 +25601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plusHealth: 50
   healthpack: {fileID: 1454073149}
-  healSound: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+  healSound: {fileID: 8300000, guid: ef31e856994fc6c4cbcea7ada74ee35c, type: 3}
 --- !u!95 &1454073152
 Animator:
   serializedVersion: 5
@@ -27613,7 +27712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plusHealth: 50
   healthpack: {fileID: 1563860903}
-  healSound: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+  healSound: {fileID: 8300000, guid: ef31e856994fc6c4cbcea7ada74ee35c, type: 3}
 --- !u!95 &1563860906
 Animator:
   serializedVersion: 5
@@ -34071,6 +34170,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   playerDamage: {fileID: 8300000, guid: ef79713956c046149809ed2a5798d316, type: 3}
   gong: {fileID: 8300000, guid: 883ec17519dd74a46b3ff74906093a9a, type: 3}
+  redScreen: {fileID: 0}
+  fadeSpeed: 1
+  fadePause: 0
 --- !u!136 &1954576580
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -36582,6 +36684,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 977649058}
     m_Modifications:
+    - target: {fileID: 2898478393072332881, guid: d44123b3a0bd339409a279af59192e3d, type: 3}
+      propertyPath: healSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ef31e856994fc6c4cbcea7ada74ee35c, type: 3}
     - target: {fileID: 5871541716331511348, guid: d44123b3a0bd339409a279af59192e3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -46.11

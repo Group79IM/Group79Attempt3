@@ -10,9 +10,10 @@ MonoImporter:
   - gunOneShopButton: {instanceID: 0}
   - healthPackShopButton: {instanceID: 0}
   - TBCShopButton: {instanceID: 0}
-  - shopSound: {fileID: 8300000, guid: 78419f98379502c4dbfb2774bc94e7c1, type: 3}
+  - shopSound: {fileID: 8300000, guid: 757505fc3c5223d4fb7a6f4b54e720db, type: 3}
   - buttonSound: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
   - coinNumText: {instanceID: 0}
+  - coinNumTextShop: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
