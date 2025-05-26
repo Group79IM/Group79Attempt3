@@ -758,13 +758,15 @@ GameObject:
   - component: {fileID: 8441566330860225114}
   - component: {fileID: 2103879211034158216}
   - component: {fileID: 2763811549302444534}
+  - component: {fileID: 3664244818720341105}
+  - component: {fileID: 914766191348773816}
   m_Layer: 0
   m_Name: coins
-  m_TagString: Untagged
+  m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8441566330860225114
 Transform:
   m_ObjectHideFlags: 0
@@ -845,6 +847,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3664244818720341105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6557390530244034519}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10197054, y: 0.080173865, z: 0.23555115}
+  m_Center: {x: 0.0028888062, y: 0.024931319, z: -0.0072764666}
+--- !u!54 &914766191348773816
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6557390530244034519}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7225131325400738361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,6 +1994,7 @@ MonoBehaviour:
   stopOffset: 1.5
   attackDamage: 10
   attackRangeTolerance: 0.5
+  isDead: 0
   enemyDamage: {fileID: 8300000, guid: 3854853fb7e6e2a4cb189bd3b63ef09b, type: 3}
   coinDrop: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
 --- !u!54 &7970675130919484307
