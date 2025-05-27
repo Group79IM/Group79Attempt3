@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerVision : MonoBehaviour
 {
 
+    // This script used to control the camera based on mouse movement, allowing the player to look around in the game world. It has since been replaced
+
     [SerializeField] Transform playerBody;
 
     public float mouseSensitivity = 100f;

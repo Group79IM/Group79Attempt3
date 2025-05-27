@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 public class SceneChanger : MonoBehaviour
 {
+
+    // This script manages scene transitions and the pause menu functionality
+
     [SerializeField] private Group79Game input;
     [SerializeField] private GameObject gameObject;
     [SerializeField] private GameObject moneyObject;
@@ -90,7 +93,7 @@ public class SceneChanger : MonoBehaviour
     {
         
     }
-    public void PauseMenuManagement(InputAction.CallbackContext context)
+    public void PauseMenuManagement(InputAction.CallbackContext context) // Opening and closing the pause menu, while changing the timescale
     {
         if (menuOpen == false)
         {

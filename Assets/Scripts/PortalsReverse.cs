@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PortalsReverse : MonoBehaviour
 {
+
+    // This script handles the portal mechanics, letting the player switch scenes backwards.
+
     [SerializeField] private AudioClip portalSound;
     int currentSceneNum = 0;
 
@@ -25,7 +28,7 @@ public class PortalsReverse : MonoBehaviour
 
     }
 
-    //  Detecting whether the player has entered the portal
+    //  Detecting whether the player has entered the portal and changing the scene based on that
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))

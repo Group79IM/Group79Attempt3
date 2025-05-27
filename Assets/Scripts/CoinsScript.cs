@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinsScript : MonoBehaviour {
-    [SerializeField] private GameObject moneyObject;
-    [SerializeField] private AudioClip coinPickUP;
-    private Money moneyScript;
 
-    void Awake()
+    // This script handles the player's interaction with coins, allowing them to collect money when colliding with coin objects.
+
+    [SerializeField] private GameObject moneyObject; // Reference to the Money object for managing player's bank account
+    [SerializeField] private AudioClip coinPickUP;
+    private Money moneyScript; // Reference to the Money script to manage the player's bank account
+
+    void Awake() // 
     {
         moneyScript = moneyObject.GetComponent<Money>();
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision) // Collecting coins when the player collides with them, increasing the back account, destroying the coin object, and playing a sound effect
     {
         if (collision.gameObject.CompareTag("Money"))
         {

@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class WeaponsManager : MonoBehaviour
 {
+    // This script manages the player's weapons, allowing them to switch between a gun and various swords
 
+    // References to the weapon GameObjects
     [SerializeField] private GameObject sword;
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject swordTwo;
     [SerializeField] private GameObject swordThree;
-    [SerializeField] private GameObject moneyObject;
-    [SerializeField] private GameObject shopObject;
+
+    [SerializeField] private GameObject moneyObject; // Reference to the Money script for managing player's bank account
+    [SerializeField] private GameObject shopObject; // Reference to the ShopScript for managing shop purchases
+
+    // UI textboxes for displaying prices
     [SerializeField] private GameObject swordPriceText;
     [SerializeField] private GameObject gunPriceText;
     [SerializeField] private GameObject swordTwoPriceText;
     [SerializeField] private GameObject swordThreePriceText;
 
-    private Money moneyScript;
-    private ShopScript shopScript;
+    private Money moneyScript; // Reference to the Money script to manage the player's bank account
+    private ShopScript shopScript; // Reference to the ShopScript to manage shop purchases
 
     void Awake()
     {
-        moneyScript = moneyObject.GetComponent<Money>();
+        moneyScript = moneyObject.GetComponent<Money>(); 
         shopScript = shopObject.GetComponent<ShopScript>();
     }
 
-    void Update()
-    {
-
-    }
-
-    public void GunEnable()
+    public void GunEnable() // This method enables the Gun for the Player when they click the Gun button in the shop
     {
         if (shopScript.playerBoughtGun)
         {
@@ -62,7 +62,7 @@ public class WeaponsManager : MonoBehaviour
         }
     }
 
-    public void SwordEnable()
+    public void SwordEnable() // This method enables the Sword for the Player when they click the Sword button in the shop
     {
         if (shopScript.playerBoughtSword)
         {
@@ -89,7 +89,7 @@ public class WeaponsManager : MonoBehaviour
         }
     }
 
-    public void SwordTwoEnable()
+    public void SwordTwoEnable() // This method enables the second sword for the player when they click the Gold Sword button in the shop
     {
         if (shopScript.playerBoughtSwordTwo)
         {
@@ -117,7 +117,7 @@ public class WeaponsManager : MonoBehaviour
         }
     }
     
-    public void SwordThreeEnable()
+    public void SwordThreeEnable() // This method enables the third sword for the player when they click the Black Sword button in the shop
     {
         if (shopScript.playerBoughtSwordThree)
         {

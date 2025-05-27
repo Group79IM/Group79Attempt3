@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Portals : MonoBehaviour
 {
+
+    // This script handles the portal mechanics, letting the player switch scenes foward.
+
     [SerializeField] private AudioClip portalSound;
     int currentSceneNum = 0;
 
     void Awake()
     {
-        currentSceneNum = SceneManager.GetActiveScene().buildIndex;
+        currentSceneNum = SceneManager.GetActiveScene().buildIndex; // Gets the current scene number
     }
 
     IEnumerator PortalSequence()
@@ -21,12 +24,10 @@ public class Portals : MonoBehaviour
         currentSceneNum++;
         SceneManager.LoadScene(currentSceneNum);
         Debug.Log("Current Scene Number: " + currentSceneNum);
-            
-
     }
     
 
-    //  Detecting whether the player has entered the portal
+    //  Detecting whether the player has entered the portal and changing the scene based on that
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
