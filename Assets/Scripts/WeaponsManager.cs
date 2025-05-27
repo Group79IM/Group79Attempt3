@@ -45,11 +45,11 @@ public class WeaponsManager : MonoBehaviour
             // sword.GetComponent<MeshRenderer>().enabled = false;
             // sword.GetComponent<WeaponController>().enabled = false;
         }
-        else if (!shopScript.playerBoughtGun && moneyScript.bankAccount >= 50)
+        else if (!shopScript.playerBoughtGun && moneyScript.bankAccount >= 80)
         {
             shopScript.playerBoughtGun = true;
             shopScript.playerUsingGun = true;
-            moneyScript.bankAccount -= 50;
+            moneyScript.bankAccount -= 80;
             gun.SetActive(true);
             sword.SetActive(false);
             gunPriceText.SetActive(false);
@@ -100,11 +100,11 @@ public class WeaponsManager : MonoBehaviour
             gun.SetActive(false);
             swordThree.SetActive(false);
         }
-        else if (!shopScript.playerBoughtSwordTwo && moneyScript.bankAccount >= 100)
+        else if (!shopScript.playerBoughtSwordTwo && moneyScript.bankAccount >= 15)
         {
             shopScript.playerBoughtSwordTwo = true;
             shopScript.playerUsingSwordTwo = true;
-            moneyScript.bankAccount -= 100;
+            moneyScript.bankAccount -= 15;
             swordTwoPriceText.SetActive(false);
             swordTwo.SetActive(true);
             sword.SetActive(false);
@@ -128,11 +128,11 @@ public class WeaponsManager : MonoBehaviour
             gun.SetActive(false);
             swordTwo.SetActive(false);
         }
-        else if (!shopScript.playerBoughtSwordThree && moneyScript.bankAccount >= 200)
+        else if (!shopScript.playerBoughtSwordThree && moneyScript.bankAccount >= 40)
         {
             shopScript.playerBoughtSwordThree = true;
             shopScript.playerUsingSwordThree = true;
-            moneyScript.bankAccount -= 200;
+            moneyScript.bankAccount -= 40;
             swordThreePriceText.SetActive(false);
             swordThree.SetActive(true);
             sword.SetActive(false);

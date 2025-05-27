@@ -15858,6 +15858,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GunEnable
       objectReference: {fileID: 0}
+    - target: {fileID: 201974655860818633, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_Name
+      value: GoldSwordPriceText
+      objectReference: {fileID: 0}
     - target: {fileID: 408450174394018791, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15904,7 +15908,7 @@ PrefabInstance:
       objectReference: {fileID: 1596861222}
     - target: {fileID: 1419145324869666320, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1980846160709822117, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -16098,9 +16102,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackSwordButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5991798871334965648, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071537845068664351, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6841688836634308893, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_Name
       value: GoldSwordButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841688836634308893, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941953128040815889, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_Name
