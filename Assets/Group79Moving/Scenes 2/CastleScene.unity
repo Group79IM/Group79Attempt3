@@ -4754,8 +4754,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018909158}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+      - m_Target: {fileID: 1018909160}
+        m_TargetAssemblyTypeName: GameReset, Assembly-CSharp
         m_MethodName: QuitApp
         m_Mode: 1
         m_Arguments:
@@ -10523,7 +10523,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018909159}
-  - component: {fileID: 1018909158}
   - component: {fileID: 1018909160}
   - component: {fileID: 1018909162}
   - component: {fileID: 1018909161}
@@ -10534,26 +10533,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1018909158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018909157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4ce82b1b97e38449962213ffeb4738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObject: {fileID: 0}
-  moneyObject: {fileID: 0}
-  tutorialObject: {fileID: 1825744040}
-  buttonContainer: {fileID: 1741098108}
-  menuBacking: {fileID: 1269191518}
-  buttonClick: {fileID: 0}
-  portalSound: {fileID: 0}
-  menuOpen: 0
 --- !u!224 &1018909159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10589,6 +10568,9 @@ MonoBehaviour:
   shopObject: {fileID: 1018909157}
   interactions: {fileID: 1018909161}
   shopScript: {fileID: 0}
+  tutorialObject: {fileID: 1825744040}
+  buttonContainer: {fileID: 1741098108}
+  menuBacking: {fileID: 1269191518}
 --- !u!114 &1018909161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18244,8 +18226,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018909158}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+      - m_Target: {fileID: 1018909160}
+        m_TargetAssemblyTypeName: GameReset, Assembly-CSharp
         m_MethodName: TutorialScene
         m_Mode: 1
         m_Arguments:
@@ -18719,7 +18701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 19663dc58b9b5a34ca45b0a89b2616f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d5b06faeb06ccd4d94b76fd5a9c0df7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19687,8 +19669,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018909158}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+      - m_Target: {fileID: 1018909160}
+        m_TargetAssemblyTypeName: GameReset, Assembly-CSharp
         m_MethodName: CloseTutorial
         m_Mode: 1
         m_Arguments:
@@ -21544,8 +21526,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018909158}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+      - m_Target: {fileID: 1018909160}
+        m_TargetAssemblyTypeName: GameReset, Assembly-CSharp
         m_MethodName: EgyptScene
         m_Mode: 1
         m_Arguments:
