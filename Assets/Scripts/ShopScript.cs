@@ -13,16 +13,20 @@ public class ShopScript : MonoBehaviour
     [SerializeField] private GameObject moneyObject;
     [SerializeField] private Button swordOneShopButton;
     [SerializeField] private Button gunOneShopButton;
-    [SerializeField] private Button healthPackShopButton;
-    [SerializeField] private Button TBCShopButton;
+    [SerializeField] private Button swordTwoShopButton;
+    [SerializeField] private Button swordThreeShopButton;
     [SerializeField] private bool playerInShop = false;
     [SerializeField] private AudioClip shopSound;
     [SerializeField] private AudioClip buttonSound;
 
     public bool playerUsingSword = false;
     public bool playerUsingGun = false;
+    public bool playerUsingSwordTwo = false;
+    public bool playerUsingSwordThree = false;
     public bool playerBoughtSword = false;
     public bool playerBoughtGun = false;
+    public bool playerBoughtSwordTwo = false;
+    public bool playerBoughtSwordThree = false;
     
 
     public bool shopOpen = false;
@@ -69,21 +73,6 @@ public class ShopScript : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-    public void BuySword()
-    {
-        if (moneyScript.bankAccount >= 20)
-        {
-            moneyScript.bankAccount -= 20;
-            playerBoughtSword = true;
-            playerUsingSword = true;
-            AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
-            Debug.Log("Bought Sword");
-        }
-        else
-        {
-            Debug.Log("Not enough money for sword");
-        }
-    }
     public void ShopManagement(InputAction.CallbackContext context)
     {
         if (!playerInShop)
@@ -108,7 +97,6 @@ public class ShopScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            
             playerInShop = true;
             Debug.Log("Player in shop");
         }
@@ -123,7 +111,8 @@ public class ShopScript : MonoBehaviour
             Debug.Log("Player left shop");
         }
     }
-    void Update() {
+    void Update()
+    {
         // Update the coin number text in the shop and on screen
         coinNumText.text = moneyScript.bankAccount.ToString();
         coinNumTextShop.text = moneyScript.bankAccount.ToString();
@@ -155,16 +144,32 @@ public class ShopScript : MonoBehaviour
         {
             gunOneShopButton.interactable = false;
         }
-
-        if (moneyScript.bankAccount >= 10) {
-            healthPackShopButton.interactable = true;
+        if (playerBoughtSwordTwo)
+        {
+            swordTwoShopButton.interactable = true;
+            // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
         }
-        else {
-            healthPackShopButton.interactable = false;
+        else if (!playerBoughtSwordTwo && (moneyScript.bankAccount >= 100))
+        {
+            swordTwoShopButton.interactable = true;
         }
-
-        TBCShopButton.interactable = false;
+        else
+        {
+            swordTwoShopButton.interactable = false;
+        }
+        if (playerBoughtSwordThree)
+        {
+            swordThreeShopButton.interactable = true;
+            // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
+        }
+        else if (!playerBoughtSwordThree && (moneyScript.bankAccount >= 200))
+        {
+            swordThreeShopButton.interactable = true;
+        }
+        else
+        {
+            swordThreeShopButton.interactable = false;
+        }
     }
-
 
 }

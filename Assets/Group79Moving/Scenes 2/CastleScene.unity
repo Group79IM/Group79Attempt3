@@ -10525,6 +10525,8 @@ GameObject:
   - component: {fileID: 1018909159}
   - component: {fileID: 1018909158}
   - component: {fileID: 1018909160}
+  - component: {fileID: 1018909162}
+  - component: {fileID: 1018909161}
   m_Layer: 5
   m_Name: SceneManager
   m_TagString: Untagged
@@ -10584,6 +10586,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
+  shopObject: {fileID: 1018909157}
+  interactions: {fileID: 1018909161}
+  shopScript: {fileID: 0}
+--- !u!114 &1018909161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018909157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99344c8a1f484c01b59e85dea0e310a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthAmount: 100
+  healthBar: {fileID: 0}
+  playerDamage: {fileID: 8300000, guid: ef79713956c046149809ed2a5798d316, type: 3}
+  gong: {fileID: 0}
+  redScreen: {fileID: 0}
+  fadeSpeed: 1
+  fadePause: 0
+--- !u!114 &1018909162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018909157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7ece64689ab7a4b8e31511c5d38579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 0}
+  moneyObject: {fileID: 0}
+  swordOneShopButton: {fileID: 0}
+  gunOneShopButton: {fileID: 0}
+  swordTwoShopButton: {fileID: 0}
+  swordThreeShopButton: {fileID: 0}
+  playerInShop: 0
+  shopSound: {fileID: 8300000, guid: 757505fc3c5223d4fb7a6f4b54e720db, type: 3}
+  buttonSound: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
+  playerUsingSword: 0
+  playerUsingGun: 0
+  playerUsingSwordTwo: 0
+  playerUsingSwordThree: 0
+  playerBoughtSword: 0
+  playerBoughtGun: 0
+  playerBoughtSwordTwo: 0
+  playerBoughtSwordThree: 0
+  shopOpen: 0
+  coinNumText: {fileID: 0}
+  coinNumTextShop: {fileID: 0}
 --- !u!1 &1023177822
 GameObject:
   m_ObjectHideFlags: 0

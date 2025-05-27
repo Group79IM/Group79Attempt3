@@ -35,6 +35,7 @@ public class WeaponController : MonoBehaviour
         {
             StartCoroutine(Attack());
             AudioSource.PlayClipAtPoint(swordWhoosh, transform.position, 1f);
+            Debug.Log("Attack");
         }
 
     

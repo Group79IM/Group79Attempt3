@@ -72,17 +72,22 @@ MonoBehaviour:
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
   swordOneShopButton: {fileID: 0}
   gunOneShopButton: {fileID: 0}
-  healthPackShopButton: {fileID: 0}
-  TBCShopButton: {fileID: 0}
+  swordTwoShopButton: {fileID: 0}
+  swordThreeShopButton: {fileID: 0}
   playerInShop: 0
-  shopSound: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
+  shopSound: {fileID: 8300000, guid: 757505fc3c5223d4fb7a6f4b54e720db, type: 3}
   buttonSound: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
   playerUsingSword: 0
   playerUsingGun: 0
+  playerUsingSwordTwo: 0
+  playerUsingSwordThree: 0
   playerBoughtSword: 0
   playerBoughtGun: 0
+  playerBoughtSwordTwo: 0
+  playerBoughtSwordThree: 0
   shopOpen: 0
   coinNumText: {fileID: 0}
+  coinNumTextShop: {fileID: 0}
 --- !u!54 &1862120959126278652
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,7 +129,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sword: {fileID: 0}
   gun: {fileID: 0}
+  swordTwo: {fileID: 0}
+  swordThree: {fileID: 0}
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
   shopObject: {fileID: 4073158482411773282}
   swordPriceText: {fileID: 0}
   gunPriceText: {fileID: 0}
+  swordTwoPriceText: {fileID: 0}
+  swordThreePriceText: {fileID: 0}
