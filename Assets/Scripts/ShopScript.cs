@@ -122,7 +122,7 @@ public class ShopScript : MonoBehaviour
             swordOneShopButton.interactable = true;
             // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
         }
-        else if (!playerBoughtSword && (moneyScript.bankAccount >= 20))
+        else if (!playerBoughtSword && (moneyScript.bankAccount >= 0))
         {
             swordOneShopButton.interactable = true;
         }
@@ -136,7 +136,7 @@ public class ShopScript : MonoBehaviour
             gunOneShopButton.interactable = true;
             // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
         }
-        else if (!playerBoughtGun && (moneyScript.bankAccount >= 50))
+        else if (!playerBoughtGun && (moneyScript.bankAccount >= 80))
         {
             gunOneShopButton.interactable = true;
         }
@@ -149,7 +149,7 @@ public class ShopScript : MonoBehaviour
             swordTwoShopButton.interactable = true;
             // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
         }
-        else if (!playerBoughtSwordTwo && (moneyScript.bankAccount >= 100))
+        else if (!playerBoughtSwordTwo && (moneyScript.bankAccount >= 15))
         {
             swordTwoShopButton.interactable = true;
         }
@@ -162,7 +162,7 @@ public class ShopScript : MonoBehaviour
             swordThreeShopButton.interactable = true;
             // AudioSource.PlayClipAtPoint(buttonSound, transform.position, 1f);
         }
-        else if (!playerBoughtSwordThree && (moneyScript.bankAccount >= 200))
+        else if (!playerBoughtSwordThree && (moneyScript.bankAccount >= 40))
         {
             swordThreeShopButton.interactable = true;
         }
