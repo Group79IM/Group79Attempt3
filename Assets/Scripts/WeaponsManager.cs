@@ -73,11 +73,10 @@ public class WeaponsManager : MonoBehaviour
             swordTwo.SetActive(false);
             swordThree.SetActive(false);
         }
-        else if (!shopScript.playerBoughtSword && moneyScript.bankAccount >= 20)
+        else if (!shopScript.playerBoughtSword && moneyScript.bankAccount >= 0)
         {
             shopScript.playerBoughtSword = true;
             shopScript.playerUsingSword = true;
-            moneyScript.bankAccount -= 20;
             sword.SetActive(true);
             gun.SetActive(false);
             swordTwo.SetActive(false);
