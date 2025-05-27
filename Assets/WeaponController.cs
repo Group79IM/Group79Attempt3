@@ -30,17 +30,16 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
-
+        // if player can and does attack
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
+            // call the attack method
             StartCoroutine(Attack());
             AudioSource.PlayClipAtPoint(swordWhoosh, transform.position, 1f);
             Debug.Log("Attack");
         }
 
-    
-
-        // //weapon switch
+        // old weapon switch code
         // if (Input.GetKeyDown(KeyCode.Alpha1) && swordEquipped == false)
         // {
         //     gun.SetActive(false);
@@ -57,6 +56,8 @@ public class WeaponController : MonoBehaviour
         // }
     }
 
+    
+    // old shoot script which is moved to LaserTrigger
     // void shoot(){
     //     laser.SetActive(true);
     // }
@@ -69,6 +70,7 @@ public class WeaponController : MonoBehaviour
         canAttack = false;
         isAttacking = true;
 
+        // set attack animations and variables needed in the sword collissions script
         if (animator != null)
         {
             animator.SetTrigger("attack");

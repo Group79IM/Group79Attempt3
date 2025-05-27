@@ -3,55 +3,48 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class WaveManager : MonoBehaviour
+public class newWave : MonoBehaviour
 {
     private int wave = 0;
-
-    [Header("Enemy Settings")]
     public GameObject enemyPrefab;
     public Transform[] spawnPoints;
-     public GameObject[] healthPacks;
+    public GameObject[] healthPacks;
     public int enemiesPerWave = 6;
-
-    [Header("3D Text & Player Detection")]
     public TextMeshPro waveText3D;
     private bool playerInTrigger = false;
-
-    [Header("Fence GameObject")]
     public GameObject fence;
-
     private List<GameObject> currentEnemies = new List<GameObject>();
-
-    private bool firstWaveFenceDisabled = false;
+    private bool BossWaveFence = false;
     [SerializeField] private AudioClip buttonClick;
     [SerializeField] private AudioClip futureBossMusic;
 
     void Start()
     {
-        SpawnWave(); // Spawn first wave
-        // No waveText3D "Wave started!" on first wave as requested
+        SpawnWave(); // Spawns the first default wave as the player loads in
     }
 
     void Update()
     {
-        if (wave == 2 && !firstWaveFenceDisabled)
+        if (wave == 2 && !BossWaveFence) // lets the boss out after three waves
         {
             if (AreAllEnemiesDead())
             {
                 fence.GetComponent<Animator>().SetTrigger("open");
-                firstWaveFenceDisabled = true;
+                BossWaveFence = true;
                 AudioSource.PlayClipAtPoint(futureBossMusic, transform.position, 1f);
                 Debug.Log("future boss music playing");
                 wave++;
             }
         }
 
+        // if the player interacts with a button
         if (playerInTrigger && Input.GetMouseButtonDown(1))
         {
             TryStartNewWave();
         }
     }
 
+    // checks if all enemies are dead
     bool AreAllEnemiesDead()
     {
         foreach (var enemy in currentEnemies)
@@ -68,22 +61,28 @@ public class WaveManager : MonoBehaviour
         return true;
     }
 
-    void TryStartNewWave()
-    {
-        bool allDead = true;
+    // attempts to create a new wave
+   void TryStartNewWave()
+{
+    // assume all enemies are dead 
+    bool allDead = true;
 
-        foreach (var enemy in currentEnemies)
+    // check every spawned enemy
+    foreach (var enemy in currentEnemies)
+    {
+        if (enemy != null)
         {
-            if (enemy != null)
+            EnemyAI enemyScript = enemy.GetComponent<EnemyAI>();
+
+            // if the enemy is alive
+            if (enemyScript != null && !enemyScript.isDead)
             {
-                EnemyAI enemyScript = enemy.GetComponent<EnemyAI>();
-                if (enemyScript != null && !enemyScript.isDead)
-                {
-                    allDead = false;
-                    break;
-                }
+                // cannot start wave yet so reset and break the loop
+                allDead = false;
+                break;          
             }
         }
+    }
 
         if (!allDead)
         {
@@ -92,6 +91,7 @@ public class WaveManager : MonoBehaviour
             return;
         }
 
+        // update the wave counter and spawn the next wave
         wave++;
         SpawnWave();
         waveText3D.text = "New wave started!";
@@ -101,18 +101,30 @@ public class WaveManager : MonoBehaviour
 
     void SpawnWave()
     {
+        // remove last spawn from the list
         currentEnemies.Clear();
 
+        
         for (int i = 0; i < enemiesPerWave; i++)
         {
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            /**
+            * Enemy spawning was learnt and based upon a youtube video
+            Reference
+            *
+            * Author: Modding by Kaupenjoe (on Youtube)
+            * Location: https://www.youtube.com/watch?v=SELTWo1XZ0c
+            * Accessed: 22/5/2025
+            */
             GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+            // end of instantiation usage 
             currentEnemies.Add(enemy);
         }
-        ActivateAllHealthPacks();
-
+        
+        ActivateAllHealthPacks(); // reactive all health packs in a new wave
     }
 
+   // check player trigger for button usage 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -125,6 +137,7 @@ public class WaveManager : MonoBehaviour
             playerInTrigger = false;
     }
 
+    // shows the wanted message for the set time then returns it to the default button message
     IEnumerator Wait(float time)
     {
         yield return new WaitForSeconds(time);
@@ -133,6 +146,7 @@ public class WaveManager : MonoBehaviour
 
     void ActivateAllHealthPacks()
 {
+    // sets all objects in an array to active if they were used
     foreach (GameObject pack in healthPacks)
     {
         if (pack != null)

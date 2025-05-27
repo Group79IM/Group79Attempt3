@@ -4,14 +4,14 @@ Reference
 *
 * Author: All Things Game Dev (on Youtube)
 * Location: https://www.youtube.com/watch?v=qQLvcS9FxnY
-* Accessed: 21/1/2025
-*/
+* Accessed: 2/4/2025
+*/  
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-// using Cinemachine;
+
 
  // creates a character controller 
 [RequireComponent(typeof(CharacterController))]
