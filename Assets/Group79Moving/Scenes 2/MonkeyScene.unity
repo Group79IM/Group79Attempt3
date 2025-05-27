@@ -12412,6 +12412,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2695063834042760737, guid: e1d90b23beea5904a96a2820153a57f3, type: 3}
   m_PrefabInstance: {fileID: 1358469320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &282573779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6498756632055637134, guid: d44123b3a0bd339409a279af59192e3d, type: 3}
+  m_PrefabInstance: {fileID: 1199788967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &282589266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2695063834042760737, guid: e1d90b23beea5904a96a2820153a57f3, type: 3}
@@ -15376,6 +15381,10 @@ PrefabInstance:
       propertyPath: redScreen
       value: 
       objectReference: {fileID: 712260098}
+    - target: {fileID: 533908192917686161, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2164914754415736743, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_Name
       value: Player 2 (1)
@@ -15392,9 +15401,37 @@ PrefabInstance:
       propertyPath: swordWhoosh
       value: 
       objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
+    - target: {fileID: 3750761987274266487, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205130744178674592, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordDamage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250776220494114786, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordWhoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: laserSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: damageAmount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777674019253960321, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: burstDuration
+      value: 0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 6190611604114447770, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 177.3
+      value: 193.836
       objectReference: {fileID: 0}
     - target: {fileID: 6190611604114447770, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15402,7 +15439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190611604114447770, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 313.4
+      value: 293.89
       objectReference: {fileID: 0}
     - target: {fileID: 6190611604114447770, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15434,8 +15471,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6783342681399916351, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: swordDamage
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427036940775935462, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordDamage
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8110748022981100479, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
+      propertyPath: swordWhoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: e12520014532b5b4db968e1f559a6b1f, type: 3}
     - target: {fileID: 8851825857702105735, guid: 25b528f6c4a3f4c9bae78289ee1002cd, type: 3}
       propertyPath: coinPickUP
       value: 
@@ -19918,13 +19963,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce783057aa9e4d7abb57b16b0aa5b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 734434726808648983, guid: 07c4ef6426e054b0cb76e2fc63681aaf, type: 3}
+  enemyPrefab: {fileID: 8311746325430638259, guid: c64f67b30ffdf491dac1849cfedd701a, type: 3}
   spawnPoints:
   - {fileID: 12714747}
   - {fileID: 111544138}
   - {fileID: 1687845597}
   - {fileID: 688783192}
   - {fileID: 1373304593}
+  healthPacks:
+  - {fileID: 1602799475}
+  - {fileID: 816382982}
+  - {fileID: 282573779}
+  - {fileID: 1433117478}
+  - {fileID: 883082401}
   enemiesPerWave: 5
   waveText3D: {fileID: 352858842}
   fence: {fileID: 861325493}
@@ -35406,6 +35457,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2695063834042760737, guid: e1d90b23beea5904a96a2820153a57f3, type: 3}
   m_PrefabInstance: {fileID: 1014991139}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &816382982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6498756632055637134, guid: d44123b3a0bd339409a279af59192e3d, type: 3}
+  m_PrefabInstance: {fileID: 439774277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &817801171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38004,6 +38060,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1d90b23beea5904a96a2820153a57f3, type: 3}
+--- !u!1 &883082401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6498756632055637134, guid: d44123b3a0bd339409a279af59192e3d, type: 3}
+  m_PrefabInstance: {fileID: 1987042667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &883414229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69163,6 +69224,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2695063834042760737, guid: e1d90b23beea5904a96a2820153a57f3, type: 3}
   m_PrefabInstance: {fileID: 1415849838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1602799475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6498756632055637134, guid: d44123b3a0bd339409a279af59192e3d, type: 3}
+  m_PrefabInstance: {fileID: 1655970943}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1603525168 stripped
 Transform:

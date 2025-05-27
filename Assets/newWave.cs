@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
     [Header("Enemy Settings")]
     public GameObject enemyPrefab;
     public Transform[] spawnPoints;
+     public GameObject[] healthPacks;
     public int enemiesPerWave = 6;
 
     [Header("3D Text & Player Detection")]
@@ -33,7 +34,7 @@ public class WaveManager : MonoBehaviour
 
     void Update()
     {
-        if (wave == 3 && !firstWaveFenceDisabled)
+        if (wave == 2 && !firstWaveFenceDisabled)
         {
             if (AreAllEnemiesDead())
             {
@@ -108,6 +109,8 @@ public class WaveManager : MonoBehaviour
             GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
             currentEnemies.Add(enemy);
         }
+        ActivateAllHealthPacks();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -127,4 +130,13 @@ public class WaveManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         waveText3D.text = "Press RMB here to Reset Enemy Wave";
     }
+
+    void ActivateAllHealthPacks()
+{
+    foreach (GameObject pack in healthPacks)
+    {
+        if (pack != null)
+            pack.SetActive(true);
+    }
+}
 }
