@@ -33,7 +33,7 @@ public class WaveManager : MonoBehaviour
 
     void Update()
     {
-        if (wave == 0 && !firstWaveFenceDisabled)
+        if (wave == 3 && !firstWaveFenceDisabled)
         {
             if (AreAllEnemiesDead())
             {
