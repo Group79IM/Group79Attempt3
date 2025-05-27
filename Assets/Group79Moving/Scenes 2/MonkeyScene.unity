@@ -33045,9 +33045,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1869756341}
     - target: {fileID: 6324505503498326429, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
+      propertyPath: swordTwoShopButton
+      value: 
+      objectReference: {fileID: 1869756339}
+    - target: {fileID: 6324505503498326429, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
       propertyPath: healthPackShopButton
       value: 
       objectReference: {fileID: 1869756339}
+    - target: {fileID: 6324505503498326429, guid: 797ac44b85f8c9a47b3e6aef9cf5411f, type: 3}
+      propertyPath: swordThreeShopButton
+      value: 
+      objectReference: {fileID: 1869756338}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -82447,6 +82455,14 @@ PrefabInstance:
       propertyPath: shopObject
       value: 
       objectReference: {fileID: 757523991}
+    - target: {fileID: 1980846160709822117, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 757523992}
+    - target: {fileID: 1980846160709822117, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwordThreeEnable
+      objectReference: {fileID: 0}
     - target: {fileID: 3121485856045493021, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -82551,9 +82567,25 @@ PrefabInstance:
       propertyPath: portalSound
       value: 
       objectReference: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
+    - target: {fileID: 5991798871334965648, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_Name
+      value: BlackSwordButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841688836634308893, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_Name
+      value: GoldSwordPackButton
+      objectReference: {fileID: 0}
     - target: {fileID: 7941953128040815889, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8057621385258438819, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 757523992}
+    - target: {fileID: 8057621385258438819, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwordTwoEnable
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4670924838016129432, guid: 02e6dcf332b137c4baed8b68f829b5a0, type: 3}
