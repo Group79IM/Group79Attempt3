@@ -629,7 +629,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4864989957835191557}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: QuitApp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1964,10 +1964,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sword: {fileID: 0}
   gun: {fileID: 0}
+  swordTwo: {fileID: 0}
+  swordThree: {fileID: 0}
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
   shopObject: {fileID: 0}
   swordPriceText: {fileID: 1861415829778599790}
   gunPriceText: {fileID: 8231490952143538509}
+  swordTwoPriceText: {fileID: 0}
+  swordThreePriceText: {fileID: 0}
 --- !u!1 &6525638868777604855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,15 +2484,19 @@ MonoBehaviour:
   moneyObject: {fileID: 7073168315451355823, guid: 9f3a2fa59ed8d4c42b5d71b394a94895, type: 3}
   swordOneShopButton: {fileID: 408450174394018791}
   gunOneShopButton: {fileID: 149900784644161652}
-  healthPackShopButton: {fileID: 8057621385258438819}
-  TBCShopButton: {fileID: 1980846160709822117}
+  swordTwoShopButton: {fileID: 0}
+  swordThreeShopButton: {fileID: 0}
   playerInShop: 0
   shopSound: {fileID: 8300000, guid: 39766b1bf55fcd74b9ba2859c9bff6ba, type: 3}
   buttonSound: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
   playerUsingSword: 0
   playerUsingGun: 0
+  playerUsingSwordTwo: 0
+  playerUsingSwordThree: 0
   playerBoughtSword: 0
   playerBoughtGun: 0
+  playerBoughtSwordTwo: 0
+  playerBoughtSwordThree: 0
   shopOpen: 0
   coinNumText: {fileID: 0}
   coinNumTextShop: {fileID: 0}

@@ -26,23 +26,22 @@ public class SceneChanger : MonoBehaviour
     void OnEnable()
     {
         input.GameUI.Enable();
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+        // AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
     }
     void OnDisable()
     {
         input.GameUI.Disable();
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+        // AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
     }
     public void MainMenu()
     {
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
-        moneyScript.bankAccount = 0;
+        // AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
     public void QuitApp()
     {
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+        // AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
         Application.Quit();
         Debug.Log("Application Has Quit");
     }
@@ -52,13 +51,13 @@ public class SceneChanger : MonoBehaviour
     }
     public void Pause()
     {
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+        // AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
         Time.timeScale = 0f;
         Enable();
     }
     public void UnPause()
     {
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+        // AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
         Time.timeScale = 1f;
         Disable();
     }
@@ -83,12 +82,12 @@ public class SceneChanger : MonoBehaviour
     public void EgyptScene()
     {
         SceneManager.LoadScene(1);
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+        // AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
     }
     public void FuturisticScene()
     {
         SceneManager.LoadScene(2);
-        AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
+    //     AudioSource.PlayClipAtPoint(buttonClick, transform.position, 1f);
     }
     public void PlayButton()
     {
