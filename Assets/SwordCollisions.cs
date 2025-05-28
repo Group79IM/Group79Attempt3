@@ -11,7 +11,8 @@ public class SwordCollisions : MonoBehaviour
   
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Damages") && wc.isAttacking && !hasHit) // if sword is in enemy collider and is hitting and has not already hit
+        // if sword is in enemy collider and is hitting and has not already hit
+        if (other.CompareTag("Damages") && wc.isAttacking && !hasHit) 
         {
             Animator enemyAnimator = other.GetComponent<Animator>();
             EnemyAI enemy = other.GetComponent<EnemyAI>();
