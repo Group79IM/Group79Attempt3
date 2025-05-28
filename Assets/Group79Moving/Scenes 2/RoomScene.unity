@@ -2645,7 +2645,6 @@ GameObject:
   - component: {fileID: 123198114}
   - component: {fileID: 123198113}
   - component: {fileID: 123198112}
-  - component: {fileID: 123198111}
   - component: {fileID: 123198110}
   m_Layer: 0
   m_Name: WaveButton (2)
@@ -2685,36 +2684,6 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
---- !u!114 &123198111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123198109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce783057aa9e4d7abb57b16b0aa5b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 734434726808648983, guid: 07c4ef6426e054b0cb76e2fc63681aaf, type: 3}
-  spawnPoints:
-  - {fileID: 1436699452}
-  - {fileID: 805106477}
-  - {fileID: 707442610}
-  - {fileID: 620432908}
-  - {fileID: 128954731}
-  - {fileID: 700814036}
-  healthPacks:
-  - {fileID: 1586359743}
-  - {fileID: 1563860903}
-  - {fileID: 1454073149}
-  - {fileID: 1430207413}
-  enemiesPerWave: 6
-  waveText3D: {fileID: 161692017}
-  fence: {fileID: 592109584}
-  buttonClick: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
-  futureBossMusic: {fileID: 8300000, guid: 899f5300cbae6dd47bda9c2383b19b8a, type: 3}
 --- !u!65 &123198112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6329,7 +6298,6 @@ GameObject:
   - component: {fileID: 345021434}
   - component: {fileID: 345021433}
   - component: {fileID: 345021432}
-  - component: {fileID: 345021431}
   - component: {fileID: 345021430}
   m_Layer: 0
   m_Name: WaveButton (1)
@@ -6369,36 +6337,6 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
---- !u!114 &345021431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345021429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce783057aa9e4d7abb57b16b0aa5b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 734434726808648983, guid: 07c4ef6426e054b0cb76e2fc63681aaf, type: 3}
-  spawnPoints:
-  - {fileID: 1436699452}
-  - {fileID: 805106477}
-  - {fileID: 707442610}
-  - {fileID: 620432908}
-  - {fileID: 128954731}
-  - {fileID: 700814036}
-  healthPacks:
-  - {fileID: 1586359743}
-  - {fileID: 1563860903}
-  - {fileID: 1454073149}
-  - {fileID: 1430207413}
-  enemiesPerWave: 6
-  waveText3D: {fileID: 1115249945}
-  fence: {fileID: 592109584}
-  buttonClick: {fileID: 8300000, guid: be229f727746bc84c90028ea0369f055, type: 3}
-  futureBossMusic: {fileID: 8300000, guid: 899f5300cbae6dd47bda9c2383b19b8a, type: 3}
 --- !u!65 &345021432
 BoxCollider:
   m_ObjectHideFlags: 0
