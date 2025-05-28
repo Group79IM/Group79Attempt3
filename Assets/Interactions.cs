@@ -27,7 +27,6 @@ public class Interactions : MonoBehaviour
             Die();
             Debug.Log("player died");
         }
-      
     }
 
     /**
