@@ -18,10 +18,8 @@ public class MovementScript : MonoBehaviour
     private Vector2 currentMovement;
     private bool movePressed;
 
-
-    
-
-    void Awake() {
+    void Awake()
+    {
         input = new PlayerInput(); // Using the new Input System
     }
 

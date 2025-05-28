@@ -174,7 +174,7 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(1.75f);
         transform.Find("coins").gameObject.SetActive(true);
-        // Destroy(gameObject, 12.5f);
+        Destroy(gameObject, 12.5f);
     }
 
 
